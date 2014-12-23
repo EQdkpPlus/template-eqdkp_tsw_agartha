@@ -27,9 +27,9 @@
 	<table_border_width>1</table_border_width>
 	<table_border_color>999999</table_border_color>
 	<table_border_style>solid</table_border_style>
-	<input_color>555</input_color>
+	<input_color>292323</input_color>
 	<input_border_width>1</input_border_width>
-	<input_border_color>2B577C</input_border_color>
+	<input_border_color>F7992B</input_border_color>
 	<input_border_style>solid</input_border_style>
 	<attendees_columns>6</attendees_columns>
 	<logo_position>center</logo_position>

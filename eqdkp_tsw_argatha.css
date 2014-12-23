@@ -1,19 +1,22 @@
- /*
- * Project:		EQdkp-Plus
- * License:		Creative Commons - Attribution-Noncommercial-Share Alike 3.0 Unported
- * Link:		http://creativecommons.org/licenses/by-nc-sa/3.0/
- * -----------------------------------------------------------------------
- * Began:		2002
- * Date:		$Date: 2011-08-31 17:55:23 +0200 (Mi, 31. Aug 2011) $
- * -----------------------------------------------------------------------
- * @author		$Author: GodMod $
- * @copyright	2006-2012 EQdkp-Plus Developer Team
- * @link		http://eqdkp-plus.com
- * @package		eqdkp-plus
- * @version		$Rev: 11169 $
- * 
- * $Id: common.php 14829 2014-12-07 15:55:23Z GodMod $
- */
+/* Project: EQdkp-Plus
+* Package: The Secret World Template Package - Style Argatha
+* Link: http://eqdkp-plus.eu
+*
+* Copyright (C) 2006-2015 EQdkp-Plus Developer Team
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Affero General Public License as published
+* by the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU Affero General Public License for more details.
+*
+* You should have received a copy of the GNU Affero General Public License
+* along with this program. If not, see <http://www.gnu.org/licenses/>.
+*/
 
  /* Colors, only Firefox supportet yet
 :root {
@@ -102,7 +105,6 @@ table {
 /* body */
 html {
 	min-height: 100%;
-	background-color:#2F2F2F;
 }
 body {
 	background: #2e78b0; /* Old browsers */
@@ -127,7 +129,7 @@ body.simple-header {
 body {	
 	background:#0e0e0e url('images/background_body.png') no-repeat;
 	background-attachment: fixed;
-	background-size: 100% 100%;	
+	background-size: 100% 100%;
 	font-size: 13px;
 	font-family: Tahoma,Arial,Verdana,sans-serif;
 	color: var(--main-mainfontcolor);
@@ -245,21 +247,21 @@ h3 {
 /* footer */
 #footer {
 	text-align: center;
-	color: #fff;
+	color: #5A5A5A;
 	font-family:'Trebuchet MS',Arial,sans-serif;
 	font-size: 12px;
 	margin-top: 20px;
 }
 
 .copyright {
-	color: #FFF;
+	color: #5A5A5A;
 }
 #footer a, copyright a {
-	color: #FFF;
+	color: #9C9C9C;
 	text-decoration:none;
 }
 #footer a:hover, copyright a:hover, #impressum:hover {
-	color: #fff;
+	color: #D5D5D5;
 	text-decoration:underline;
 }
 #dialog_disclaimer{
@@ -339,7 +341,7 @@ h3 {
 }
 
 .fixed_width.frontend table.scrollable-x {
-	table-layout: fixed;	
+	table-layout: fixed;
 }
 
 .fixed_width.frontend table.scrollable-x tbody {
@@ -583,9 +585,9 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 	margin: 0px;
 }
 
-select:focus, textarea:focus, input:focus {
+select:focus, textarea:focus, input:focus, select:hover, textarea:hover, input:hover{
 	border-color: rgba(82, 168, 236, 0.8);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #F7992B;
 	outline: 0 none;
 }
 
@@ -819,6 +821,7 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 	width: 100%;
 }
 .tr { display: table-row;}
+
 .td { 
 	display: table-cell;
 	padding: 2px;
@@ -904,7 +907,7 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 	position:relative;
 	margin:0;
 	padding:1px;
-}			
+}
 .markImageResized{
 	width:32px;
 	height:32px;
@@ -1084,6 +1087,7 @@ div[aria-describedby="dialog-login"] .password-forgot{
 	margin-bottom: 10px;
 	padding-bottom: 5px;
 }
+
 .ui-tabs ul.ui-tabs-nav {
 	background: none !important;
 	border-radius: 0px !important;
@@ -1091,6 +1095,11 @@ div[aria-describedby="dialog-login"] .password-forgot{
 	border-left: 0px;
 	border-right: 0px;
 }
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	padding-bottom:0px !important;
+}
+
 .ui-helper-reset{
 background-color:#2F2F2F
 }
@@ -1128,8 +1137,8 @@ background: rgba(0, 0, 0, 0.65) !important;
 
 /* general: information boxes NEW */
 .infobox {
-	background-color: #F5F5F5;
-	border: 1px solid #E3E3E3;
+	background-color: #2F2F2F;
+	border: 1px solid #292323;
 	border-radius: 4px 4px 4px 4px;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
 	margin-bottom: 20px;
@@ -1143,18 +1152,21 @@ background: rgba(0, 0, 0, 0.65) !important;
 }
 
 .infobox-blue {
-	background-color: #D9EDF7;
-	color: #3A87AD;
+	background-color: #00757E;
+	color: #FFF;
+	border:1px solid #00AEFF;
 }
 
 .infobox-red {
-	background-color: #F2DEDE;
-	color: #B94A48;
+	background-color: #8A0000;
+	color: #FFF;
+	border:1px solid #F00;
 }
 
 .infobox-green {
-	background-color: #DFF0D8;
-	color: #468847;
+	background-color: #128A00;
+	color: #FFF;
+	border:1px solid #3F0;
 }
 
 /* general: pagination */
@@ -1717,7 +1729,11 @@ ul.breamcrumb .current::before{
 .browser-icon{
 	width:24px;
 	height:24px;
-	color: grey;
+	color: white;
+	fill: #FFF;
+}
+.adminicon::before {
+font-size: 1.0em;
 }
 
 /* ACP: index, rss notifications */
@@ -1726,7 +1742,7 @@ ul.breamcrumb .current::before{
 	background: #2F2F2F;
 	margin:0;
 	padding:5px;
-	border:1px solid #dddddd;
+	border:1px solid #292323;
 	height:200px;
 	width:auto;
 	overflow: auto;
@@ -2098,41 +2114,7 @@ span.group_selector {
 	background-color:#466988;
 	overflow: hidden;
 }
-/*Changes for custom tmpl raidacalview*/
-.viewraidcal{
-border: hidden !important;
-padding: 0px 0px 0px 0px
- }
-[class*="tr class_"]{
--webkit-box-shadow:  0px 0px 10px 2px ;
--moz-box-shadow:  0px 0px 10px 2px ;
-box-shadow:  0px 0px 10px 2px ;
-}
-.viewraid{
-color:inherit;
-font-size:2em;
-text-transform:uppercase;
- }
- .viewraid.count{
-font-size:60%;
-}
-[class*="viewraid status"]{
-font-size:60%;
-text-transform:uppercase; 
-margin-left:-0.6em;
-}
-.viewraid.status0{
-color:#00A400
-}
-.viewraid.status1{
-color:#E9EC00
-}
-.viewraid.status2{
-color:#E80000
-}
-.viewraid.status3{
-color:#800080
-}
+
 /* general: game specific */
 .resists {
 	width: 27px;
