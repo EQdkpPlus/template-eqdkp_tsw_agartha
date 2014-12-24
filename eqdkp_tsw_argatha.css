@@ -1727,13 +1727,12 @@ ul.breamcrumb .current::before{
 
 /* ACP: index, browsers */
 .browser-icon{
+	display: inline;
+}
+.browser-icon svg {
 	width:24px;
 	height:24px;
-	color: white;
-	fill: #FFF;
-}
-.adminicon::before {
-font-size: 1.0em;
+	fill:#FFCF02;
 }
 
 /* ACP: index, rss notifications */
