@@ -558,15 +558,6 @@ a:hover {
 	color: #000;
 	text-decoration: none;
 }
-.ui-tabs-panel a, .ui-tabs-panel a:link, .ui-tabs-panel a:active,.ui-tabs-panel a:visited{
-	color: #FFCF02 !important;
-	text-decoration: none;
-}
-
-.ui-tabs-panel a:hover {
-	color: #000 !important;
-	text-decoration: none;
-}
  
 /* Inputs */
 
@@ -1806,6 +1797,9 @@ ul.breamcrumb .current::before{
 	border-bottom: 1px solid #292323;
 	background-color: rgba(0, 0, 0, 0.65);
 	padding: 3px;
+}
+.adminicon:before {
+font-size:inherit !important;
 }
 
 .eye{

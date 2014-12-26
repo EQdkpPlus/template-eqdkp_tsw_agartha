@@ -3,7 +3,8 @@
 * If you want to have the game specific background image, please uncomment the following block
 */
 
-/*Use cover or contain; scroll or fixed for our own adjustments/*
+/*Use cover or contain; scroll or fixed for our own adjustments*/
+/*
 #header {
 	background: transparent url('TEMPLATE_BACKGROUND') no-repeat center top; 
 	background-size: contain; 
@@ -23,7 +24,13 @@ body {
 	background-size: 100% 100%;	
 }
 */
+/*============================================================================================*/
+/*Remove the TSW Logo behind the Header Title*/
 
+/*
+#titles h1 {
+	background:none;
+}*/
 
 /*============================================================================================*/
 
