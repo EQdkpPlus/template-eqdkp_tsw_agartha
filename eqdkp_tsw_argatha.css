@@ -1489,7 +1489,7 @@ ul.breamcrumb .current::before{
 }
 .sf-menu li:hover, .sf-menu li.sfHover,
 .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
-	background: #CFDEFF;
+	background: #292323;
 	outline: 0;
 }
 
@@ -2588,7 +2588,7 @@ text-shadow: 0 0.5px 0.5px rgba(0,0,0,1);
 }
 
 .mychars-points-tooltip tr.active {
-	background-color: #efefef;
+	background-color: transparent;
 }
 
 .user-tooltip-avatar {
