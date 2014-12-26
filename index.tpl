@@ -485,7 +485,10 @@
 		
 		<footer id="footer">
 				{PORTAL_BLOCK2}
-				{EQDKP_PLUS_COPYRIGHT}
+				{EQDKP_PLUS_COPYRIGHT}<br>
+			<div class="copyright">© 2007-2012, "The Secret World"™ is a registered trademark of Funcom Gmbh 2012. All rights reserved. All logos, characters, names and distinctive likenesses thereof are intellectual property of Funcom GmBH unless otherwise noted. All other trademarks are the property of their respected owners.</div><br>
+				<a target="new" href="http://www.funcom.com"><img border="0" src="{TEMPLATE_PATH}/images/footer-logo-funcom.png" alt="Funcom" /></a>
+				<a target="new" href="http://www.ea.com"><img border="0" src="{TEMPLATE_PATH}/images/footer-logo-ea.png" alt="Electronic Arts" /></a>
 		</footer><!-- close footer -->
 	</div><!-- close wrapper -->
 	
