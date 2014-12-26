@@ -127,7 +127,7 @@ body.simple-header {
 }
 
 body {	
-	background:#0e0e0e url('images/background_body.png') no-repeat;
+	background:#0e0e0e url('TEMPLATE_IMAGE_PATH/background_body.png') no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
 	font-size: 13px;
@@ -355,7 +355,7 @@ h3 {
 }
 
 #header {
-	background: transparent url('TEMPLATE_BACKGROUND') no-repeat center bottom;
+	background: transparent url('TEMPLATE_IMAGE_PATH/template_background.jpg') no-repeat center bottom;
 	background-size: cover;
 	display:block;
 	width: 100%;
@@ -1152,7 +1152,7 @@ background: rgba(0, 0, 0, 0.65) !important;
 }
 
 .infobox-blue {
-	background-color: #00757E;
+	background-color: #006A9C;
 	color: #FFF;
 	border:1px solid #00AEFF;
 }
