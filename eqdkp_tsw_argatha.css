@@ -2410,14 +2410,15 @@ a.tool-item i {
 
 /* Notifications */
 .notification-bubble-red {
-	background-color: #B94A48;
+	background-color: rgba (0,0,0,0.1);
+	border:1.5px solid #B94A48;
 	margin-right: 4px;
 	padding-right: 9px;
 	padding-left: 9px;
-	-webkit-border-radius: 9px;
-	-moz-border-radius: 9px;
-	border-radius: 9px;
-	color: #FFFFFF;
+	-webkit-border-radius: 9px 0px;
+	-moz-border-radius: 9px 0px;
+	border-radius: 9px 0px;
+	color: #B94A48;
 	display: inline-block;
 	font-size: 11px;
 	font-weight: bold;
@@ -2427,14 +2428,15 @@ a.tool-item i {
 	white-space: nowrap;
 }
 .notification-bubble-yellow {
-	background-color: #F89406;
+	background-color: rgba (0,0,0,0.1);
+	border:1.5px solid #F89406;
 	margin-right: 4px;
 	padding-right: 9px;
 	padding-left: 9px;
-	-webkit-border-radius: 9px;
-	-moz-border-radius: 9px;
-	border-radius: 9px;
-	color: #FFFFFF;
+	-webkit-border-radius: 9px 0px;
+	-moz-border-radius: 9px 0px;
+	border-radius: 9px 0px;
+	color: #F89406;
 	display: inline-block;
 	font-size: 11px;
 	line-height: 20px;
@@ -2445,14 +2447,15 @@ a.tool-item i {
 }
 
 .notification-bubble-green{
-	background-color: #468847;
+	background-color: rgba (0,0,0,0.1);
+	border:1.5px solid #3CE03F;
 	margin-right: 4px;
 	padding-right: 9px;
 	padding-left: 9px;
-	-webkit-border-radius: 9px;
-	-moz-border-radius: 9px;
-	border-radius: 9px;
-	color: #FFFFFF;
+	-webkit-border-radius: 9px 0px;
+	-moz-border-radius: 9px 0px;
+	border-radius: 9px 0px;
+	color: #3CE03F;
 	display: inline-block;
 	font-size: 11px;
 	line-height: 20px;
@@ -3342,4 +3345,43 @@ color:#E80000
 }
 .viewraid.status3{
 color:#800080
+}
+/*Chat Plugin*/
+.chatWindow, .chatWindowMenu{
+	background-color:#202020;
+	border: 1px solid rgba(0, 0, 0, .20);
+	border-radius: 6px 6px 6px 6px;
+}
+
+ #chatMenu .chatWindowHeader2,.chatWindowHeader, .chatWindowHeader2 {
+	background: #202020;
+	color:#FFCF02;
+}
+.chatWindowContent, .chatWindowAddUser, .chat_last_online{
+	background: #2F2F2F;
+	color:#D9D7D7;
+}
+.active .chatWindowHeader{
+	background: #F7992B;
+	color:#292323;
+}
+.chatPost{
+border-top:1px solid #292323;
+}
+.chatOnlineSeperator{
+border-bottom:1px solid #000;
+}
+
+.chat_username, .chat_user_avatar {
+	color:#FFCF02;
+}
+#chatMenu .chatInput{
+	background: #2F2F2F;
+	border: none;
+}
+.chatWindowMin{
+	background:#F7992B;
+	color:#292323;
+	border:0px solid #000;
+	border-radius: 6px 0px 0px 0px;
 }
