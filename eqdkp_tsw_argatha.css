@@ -441,7 +441,7 @@ h3 {
 }
 
 #contentBody2 {
-	background-color:rgba(72, 72, 72, 0.7);
+	background-color:rgba(72, 72, 72, 0.25);
 	padding: 5px;
 	text-align: left;
 }
@@ -827,12 +827,15 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 }
 
 #contentBody th, #contentBody td {
-	border-top: 1px solid #292323;
-	border-bottom: 1px solid #292323;
+/*	border-top: 1px solid #292323;
+	border-bottom: 1px solid #292323;*/
 	line-height: 20px;
 	padding: 6px;
 	text-align: left;
 	vertical-align: top;
+		box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4) inset, 0px 0px 0px 2px rgba(255, 255, 255, 0.1) inset;
+	-moz-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4) inset, 0px 0px 0px 2px rgba(255, 255, 255, 0.1) inset;
+	-webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4) inset, 0px 0px 0px 2px rgba(255, 255, 255, 0.1) inset;
 }
 
 .portalbox_content th, .portalbox_content td, .portalbox_content .td {
@@ -848,7 +851,7 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 }
 
 #contentBody .row1, .portalbox_content .row1, .colorswitch tr:nth-child(even),.colorswitch>td:nth-child(even), .colorswitch > div:nth-child(even){
-	background-color: rgba(125, 125, 125, 0.25); /*var(--main-row1-color)*/
+	background-color: rgba(125, 125, 125, 0.0); 
 }
 
 #contentBody .row2,.portalbox_content .row2, .helpline, .colorswitch tr:nth-child(odd),.colorswitch>td:nth-child(odd), .colorswitch > div:nth-child(odd){
@@ -872,6 +875,14 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 
 #contentBody th a:hover {
 	color: #999;
+}
+
+#contentBody table{
+	background-color: rgba(125, 125, 125, 0.25);
+	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4) inset, 0px 0px 0px 2px rgba(255, 255, 255, 0.1) inset;
+	-moz-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4) inset, 0px 0px 0px 2px rgba(255, 255, 255, 0.1) inset;
+	-webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4) inset, 0px 0px 0px 2px rgba(255, 255, 255, 0.1) inset;
+	border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .contentDivider {
@@ -1143,19 +1154,19 @@ background: rgba(0, 0, 0, 0.65) !important;
 }
 
 .infobox-blue {
-	background-color: #006A9C;
+	background-color: rgba(0, 106, 156, 0.5);
 	color: #FFF;
 	border:1px solid #00AEFF;
 }
 
 .infobox-red {
-	background-color: #8A0000;
+	background-color: rgba(138, 0, 0, 0.5);
 	color: #FFF;
 	border:1px solid #F00;
 }
 
 .infobox-green {
-	background-color: #128A00;
+	background-color: rgba(18, 138, 0, 0.5);
 	color: #FFF;
 	border:1px solid #3F0;
 }
@@ -2020,6 +2031,8 @@ table.guesttable {
 }
 table.guesttable td{
 	color:black;
+	background: rgba(255, 255, 255, 0.3);
+}
 }
 .style1 {
 	text-align: center;
@@ -2255,6 +2268,7 @@ div.error { display: none; }
 
 .comment_container, .comment_write_container {
 	position: relative;
+	min-height: 68px;
 	min-height: 68px;
 	padding: 5px;
 	background: #FFFFFF;
@@ -2654,8 +2668,8 @@ table.leaderboard tbody tr td {
 }
 
 table.leaderboard tbody tr td table.borderless tbody tr td {
-	border-bottom: 1px solid #DDDDDD !important;
-	border-top: 1px solid #DDDDDD !important;
+/*	border-bottom: 1px solid #DDDDDD !important;
+	border-top: 1px solid #DDDDDD !important;*/
 }
 
 /* Colorpicker */
@@ -2820,6 +2834,8 @@ ul.image-gallery li.folder i {
 
 td.twinktd > * {
 	vertical-align : top;
+	max-height:150px;
+	align:center;
 }
 td.twinktd i {
 	margin-top: 5px;
