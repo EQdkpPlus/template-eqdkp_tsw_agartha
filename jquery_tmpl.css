@@ -316,6 +316,7 @@ button.ui-button::-moz-focus-inner {
 	width: 17em;
 	padding: .2em .2em 0;
 	display: none;
+	background-color:#131313 !important;
 }
 .ui-datepicker .ui-datepicker-header {
 	position: relative;
@@ -869,7 +870,7 @@ body .ui-tooltip {
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
-	border: 1px solid #666666;
+	border: 1px solid #292323;
 	background: #555555 url("images/ui-bg_glass_20_555555_1x400.png") 50% 50% repeat-x;
 	font-weight: bold;
 	color: #eeeeee;
@@ -924,12 +925,12 @@ body .ui-tooltip {
 .ui-widget-header .ui-state-highlight {
 	border: 1px solid #cccccc;
 	background: #eeeeee url("images/ui-bg_highlight-soft_80_eeeeee_1x100.png") 50% top repeat-x;
-	color: #2e7db2;
+	color: #F7992B;
 }
 .ui-state-highlight a,
 .ui-widget-content .ui-state-highlight a,
 .ui-widget-header .ui-state-highlight a {
-	color: #2e7db2;
+	color: #F7992B;
 }
 .ui-state-error,
 .ui-widget-content .ui-state-error,

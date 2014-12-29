@@ -24,6 +24,16 @@
 			//<![CDATA[
 			{JS_CODE}
 			
+			$(document).ready(function() {
+				/* Login Dialog */
+				$( "#dialog-login" ).dialog({
+					height: <!-- IF S_BRIDGE_INFO -->450<!-- ELSE -->350<!-- ENDIF -->,
+					width: 530,
+					modal: true,
+					autoOpen: false,
+				});
+			});
+			
 			<!-- IF S_NORMAL_HEADER -->
 			var user_timestamp_atom = "{USER_TIMESTAMP_ATOM}";
 			var user_clock_format = "dddd, {USER_DATEFORMAT_LONG} {USER_TIMEFORMAT}";
@@ -116,14 +126,7 @@
 			
 			$(document).ready(function() {
 				user_clock();
-				
-				/* Login Dialog */
-				$( "#dialog-login" ).dialog({
-					height: <!-- IF S_BRIDGE_INFO -->450<!-- ELSE -->350<!-- ENDIF -->,
-					width: 530,
-					modal: true,
-					autoOpen: false,
-				});
+
 				$( ".openLoginModal" ).on('click', function() {
 					$( "#dialog-login" ).dialog( "open" );
 				});
@@ -243,7 +246,6 @@
 					$(".mychars-points-target").html(icons + " "+current);
 				}
 				<!-- ENDIF -->
-				
 			});
 			<!-- ELSE -->
 				<!-- JS for simple header. Above is for normal header only -->
@@ -485,7 +487,8 @@
 		
 		<footer id="footer">
 				{PORTAL_BLOCK2}
-				{EQDKP_PLUS_COPYRIGHT}<br>
+				{EQDKP_PLUS_COPYRIGHT}
+				<br>
 			<div class="copyright">© 2007-2012, "The Secret World"™ is a registered trademark of Funcom Gmbh 2012. All rights reserved. All logos, characters, names and distinctive likenesses thereof are intellectual property of Funcom GmBH unless otherwise noted. All other trademarks are the property of their respected owners.</div><br>
 				<a target="new" href="http://www.funcom.com"><img border="0" src="{TEMPLATE_PATH}/images/footer-logo-funcom.png" alt="Funcom" /></a>
 				<a target="new" href="http://www.ea.com"><img border="0" src="{TEMPLATE_PATH}/images/footer-logo-ea.png" alt="Electronic Arts" /></a>

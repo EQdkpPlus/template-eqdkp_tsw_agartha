@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<install type="template" version="1.1.0">
+<install type="template" version="0.0.2">
 	<name>EQdkp TSW Argatha</name>
-	<author>GodMod/Inkraja</author>
+	<author>Inkraja</author>
 	<authorEmail></authorEmail>
 	<authorUrl>http://eqdkp-plus.eu</authorUrl>
-	<creationDate>2015-01-01  T10:26:19+00:00</creationDate>
-	<copyright>GodMod</copyright>
+	<creationDate>2015-01-01</creationDate>
+	<copyright>Inkraja</copyright>
 	<license>CC</license>
 	<version>0.0.2</version>
 	<description></description>
