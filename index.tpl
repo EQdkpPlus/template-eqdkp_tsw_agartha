@@ -8,6 +8,7 @@
 		<meta name="keywords" content="{META_KEYWORDS}" />
 		<meta name="description" content="{META_DESCRIPTION}" />
 		<meta name="author" content="{GUILD_TAG}" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 		{META}
 		{LINK}
 		<title>{PAGE_TITLE}</title>
@@ -377,7 +378,7 @@
 		<header>
 			<div id="header">
 				<div id="logoContainer" class="{T_LOGO_POSITION}">
-					<div id="logoArea" class="hiddenSmartphone">
+					<div id="logoArea">
 						<!-- IF HEADER_LOGO -->
 						<img src="{HEADER_LOGO}" alt="{MAIN_TITLE}" id="mainlogo" />
 						<!-- ENDIF -->
@@ -404,9 +405,20 @@
 							{MAIN_MENU}
 							<div class="clear noheight">&nbsp;</div>
 						</div>
-						<div class="hiddenDesktop mainmenu">
-							<i class="fa fa-list"></i>
-							{MAIN_MENU_SELECT}
+						<div class="hiddenDesktop nav-mobile">
+							<i class="fa fa-list hand" onclick="$('.nav-mobile-overlay').toggle();"></i>
+							<div class="nav-mobile-overlay">
+								<div class="nav-mobile-closebtn" onclick="$('.nav-mobile-overlay').toggle();">
+									<i class="fa fa-lg fa-times hand"></i>
+								</div>
+							{MAIN_MENU_MOBILE}
+							<!-- IF S_IN_ADMIN -->
+							<div class="admin-headline"><i class="fa fa-cog fa-lg"></i> {L_menu_admin_panel}</div>
+							{ADMIN_MENU_MOBILE}
+							<!-- ELSE -->
+								<!-- IF S_ADMIN --><div class="admin-headline"><a href="{EQDKP_ROOT_PATH}admin/{SID}"><i class="fa fa-cog fa-lg"></i> {L_menu_admin_panel}</a></div><!-- ENDIF -->
+							<!-- ENDIF -->
+							</div>
 						</div>
 					</div><!-- close mainmenu -->
 					
@@ -414,9 +426,6 @@
 					<div id="adminmenu">
 						<div class="hiddenSmartphone">
 							{ADMIN_MENU}
-						</div>
-						<div class="hiddenDesktop">
-							<select><option>Admin Navigation</option></select>
 						</div>
 					</div>
 					<!-- ENDIF -->
@@ -548,12 +557,7 @@
 		{JS_CODE_EOP}
 		{JS_CODE_EOP2}
 		
-		//Reponsivness - fired only if breakpoint is reached
-		if ($('body').hasClass('responsive') && $(".reponsiveTestClass").css("text-align") == "center" ) {
-			$('.stackcolumns').stackcolumns({myClass:'stackcolumns hiddenDesktop' });
-			$('.stacktable').stacktable({myClass:'stacktable hiddenDesktop'});
-		}
-		
+
 		//Reset Favicon, for Bookmarks
 		$(window).on('unload', function() {
             if (typeof favicon !== 'undefined'){
