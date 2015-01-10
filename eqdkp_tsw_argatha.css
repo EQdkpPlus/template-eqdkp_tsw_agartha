@@ -18,6 +18,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+
  /* Colors, only Firefox supportet yet
 :root {
   --main-mainfontcolor: #D9D7D7; //white-grey
@@ -167,6 +168,8 @@ h3 {
 	box-shadow: 0px 2px 3px #000;
 	margin-bottom: 10px;
 	text-align:left;
+
+
 }
 
 #personalArea a {
@@ -343,10 +346,14 @@ h3 {
 #header {
 	background: transparent url('TEMPLATE_IMAGE_PATH/template_background.jpg') no-repeat center bottom;
 	background-size: cover;
+
 	display:block;
 	width: 100%;
 	background-attachment: scroll;
 	text-align:center;
+
+
+
 }
 
 #logoContainer {
@@ -424,6 +431,9 @@ h3 {
 	margin: 5px;
 	padding: 1px;
 	margin-bottom: 14px;
+
+
+
 }
 
 #contentBody2 {
@@ -457,6 +467,9 @@ h3 {
 	margin: 5px;
 	padding: 1px;
 	margin-bottom: 14px;
+
+
+
 }
 
 .portalbox_head {
@@ -500,6 +513,10 @@ h3 {
  * MENUS
  **************************************************/
 
+
+
+
+
 .menu {
 	list-style:none;
 	display:block;
@@ -527,18 +544,36 @@ h3 {
 
 .mainmenu {
 	font-size: 14px;
+
+
 }
+
+
+
+
+
 
 ul.mainmenu li a.link_indexphp:before, ul.mainmenu li a.link_entry_home:before {
 	content:"\f015";
 	font-family: FontAwesome;
 	font-size: 20px;
+
+
+
+
+
+
+
 }
+
+
+
 
 /* Links */
 a,a:link,a:active,a:visited {
 	color: #FFCF02;
 	text-decoration: none;
+
 }
 a:hover {
 	color: #000;
@@ -699,6 +734,7 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 	background: -webkit-gradient(linear, left top, left bottom, from(#F7992B), to(#F7992B));
 	background: -moz-linear-gradient(top, #F7992B, #F7992B);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7992B', endColorstr='#F7992B');
+
 }
 .blue:hover, .button:hover, input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:not(.ui-widget):hover {
 	color: #FFF;
@@ -806,6 +842,10 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 }
 
 #contentBody th, .portalbox_content th {
+
+
+
+
 	font-weight: bold;
 	background-color: rgba(0, 0, 0, 0.65);
 	white-space:nowrap;
@@ -831,6 +871,7 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 	padding: 6px;
 	text-align: left;
 	vertical-align: top;
+
 }
 
 .border-top {
@@ -870,6 +911,7 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 	-moz-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4) inset, 0px 0px 0px 2px rgba(255, 255, 255, 0.1) inset;
 	-webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4) inset, 0px 0px 0px 2px rgba(255, 255, 255, 0.1) inset;
 	border: 1px solid rgba(0, 0, 0, 0.15);
+
 }
 
 .contentDivider {
@@ -980,6 +1022,7 @@ fieldset.settings dl:hover dd{
 	border-left: 1px solid #000;
 }
 fieldset.settings dt label {
+
 	font-size: 1.00em;
 	text-align: left;
 	font-weight: bold;
@@ -1077,6 +1120,12 @@ div[aria-describedby="dialog-login"] .password-forgot{
 	padding-bottom: 5px;
 }
 
+
+
+
+
+
+
 .ui-tabs ul.ui-tabs-nav {
 	background: none !important;
 	border-radius: 0px !important;
@@ -1100,6 +1149,10 @@ background-color:#2F2F2F
 .ui-datepicker, .ui-timepicker-div{
 	background-color:#131313;
 }
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor { min-height:1.7em; } /* Fixes for update badges */
+
+.sf-admin > li > a{ min-height: 1.7em; } /* Fixes for update badges */
+
 #contentBody .ui-tabs th.footer {
 	background-color: rgba(0, 0, 0, 0.65) !important;
 }
@@ -1279,6 +1332,7 @@ ul.breamcrumb {
 	border-radius: 3px 3px 3px 3px;
 	overflow: hidden;
 	width: 100%;
+
 }
 
 ul.breamcrumb li {
@@ -1334,12 +1388,22 @@ ul.breamcrumb a::before{
 	z-index: 1;
 }
 
+
+
+
+
+
+
+
+
+
 ul.breamcrumb a:hover::after{
 	border-left-color: #1D1D1D;
 }
 
 ul.breamcrumb .current,
 ul.breamcrumb .current:hover{
+
 	font-weight: bold;
 	background: none;
 }
@@ -1413,12 +1477,12 @@ ul.breamcrumb .current::before{
 	-webkit-border-radius: 9px 0px;
 	-moz-border-radius: 9px 0px;
 	border-radius: 9px 0px;
+	line-height:20px;
 	color: #B94A48;
 	display: inline-block;
 	font-size: 11px;
+
 	font-weight: bold;
-	line-height: 20px;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	vertical-align: baseline;
 	white-space: nowrap;
 }
@@ -1434,12 +1498,12 @@ ul.breamcrumb .current::before{
 	-webkit-border-radius: 9px 0px;
 	-moz-border-radius: 9px 0px;
 	border-radius: 9px 0px;
+	line-height:20px;
 	color: #F89406;
 	display: inline-block;
 	font-size: 11px;
+
 	font-weight: bold;
-	line-height: 20px;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	vertical-align: baseline;
 	white-space: nowrap;
 }
@@ -1453,6 +1517,7 @@ ul.breamcrumb .current::before{
 .sf-menu a {
 	padding: .75em 1em;
 	text-decoration: none;
+
 	min-height:1.4em;
 }
 .sf-menu a, .sf-menu a:visited {
@@ -1495,7 +1560,17 @@ ul.breamcrumb .current::before{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 	width: 100%;
 	min-height: 3em;
+
+
+
+
+
 }
+
+
+
+
+
 .sf-admin a, .mainmenu a, .sf-admin a:visited, .mainmenu a:visited{
 	color: #D9D7D7;
 }
@@ -1509,15 +1584,35 @@ ul.breamcrumb .current::before{
 	border-top: 1px solid #000;
 }
 .mainmenu li li,.mainmenu li li li {
+
 	font-size: 13px;
 }
 
 .sf-admin li li li , .mainmenu li li li{
 	background: #2f3033;
 	border-top: 1px solid #000;
+
+
+
+
+
+
+
+
+
+
+
 }
 .sf-admin li:hover, .sf-menu.sf-admin li.sfHover,
 .sf-admin a:focus, .sf-menu.sf-admin a:hover, .sf-menu.sf-admin a:active, .mainmenu li:hover, .mainmenu a:focus , .sf-menu.mainmenu li.sfHover, .sf-menu.mainmenu a:hover{
+
+
+
+
+
+
+
+
 	background: #000000 !important;
 }
 
@@ -1527,6 +1622,13 @@ ul.breamcrumb .current::before{
 }
 
 /* general: superfish - single dropdown menu */
+
+
+
+
+
+
+
 .sf-ddm {
 	margin-left: 10px;
 	float: right;
@@ -1915,6 +2017,7 @@ ul.portal_block {
 .fc-title{
 	vertical-align: middle;
 }
+
 /* fix for the buttons in modern template */
 .fc-button-group .ui-corner-left {
 	border-radius: 4px 0px 0px 4px;
@@ -2000,6 +2103,9 @@ fieldset.raidcal_infos dt, fieldset.moderation_panel dt {
 	width: 24px;
 	height: 24px;
 }
+
+
+
 
 .guesttable b {
 	font-family: 'Trebuchet MS',Arial,sans-serif;
@@ -2168,6 +2274,7 @@ div.error { display: none; }
 	margin-top: 4px;
 	margin-bottom: 10px;
 	color: #C3AC5D;
+
 }
 
 .article_content{
@@ -2394,11 +2501,15 @@ td.hiddenSmartphone, th.hiddenSmartphone {
 
 .social-bookmarks a.gplus {
 	background-color: #d34836;
+
+
 }
 
 
 .social-bookmarks a.gplus:hover {
 	background-color: #f75b44;
+
+
 
 }
 
@@ -2956,6 +3067,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	color: #FFFFFF;
 	display: inline-block;
 	font-size: 11px;
+
 	font-weight: bold;
 	margin-right: 10px;
 	padding: 4px 7px;
@@ -2964,6 +3076,9 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	vertical-align: middle;
 	white-space: nowrap;
 	line-height: 11px;
+
+
+
 }
 
 .user-profile .boxHeader {
@@ -3127,6 +3242,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	}
 	
 	.responsive:not(.simple-header) .ui-tabs-nav li, .responsive.simple-header.mobile .ui-tabs-nav li {
+
 		float: none;
 		width: 100%;
 		height: 30px;
@@ -3637,6 +3753,9 @@ color:#E80000
 color:#800080
 }
 /*Chat Plugin*/
+
+
+
 .chatWindow, .chatWindowMenu{
 	background-color:#202020;
 	border: 1px solid rgba(0, 0, 0, .20);
@@ -3647,12 +3766,15 @@ color:#800080
 	background: #202020!important;
 	color:#FFCF02!important;
 	border-radius: 5px 5px 0px 0px;
+
 }
 .chatWindowContent, .chatWindowAddUser, .chat_last_online,.chatMessage {
 	background: #2F2F2F!important;
 	color:#D9D7D7!important;
+
 }
 .active .chatWindowHeader{
+
 	background: #F7992B!important;
 	color:#292323!important;
 	border-radius: 5px 5px 0px 0px;
@@ -3684,3 +3806,7 @@ border-bottom:1px solid #000;
 	border:0px solid #000 !important;
 	border-radius: 6px 0px 0px 0px;
 }
+
+
+
+
