@@ -1010,7 +1010,6 @@ fieldset.mediumsettings dd{
 	margin: 0 0 0 35%;
 }
 fieldset.settings dl {
-	overflow: hidden;
 	margin-bottom: 10px;
 	font-size: 0.95em;
 	padding-bottom: 1px;
@@ -1061,7 +1060,6 @@ img {
 }
 
 input.ui-spinner-input, input.ui-spinner-input:focus, input.ui-spinner-input:hover {
-	background:transparent;
 	border:none;
 	box-shadow: none;
 }
@@ -3416,7 +3414,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	}
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 590px) {
 
 	.responsive fieldset.settings dd, .responsive fieldset.settings dt{
 		display:block;
