@@ -1013,6 +1013,14 @@ fieldset.settings dl {
 	margin-bottom: 10px;
 	font-size: 0.95em;
 	padding-bottom: 1px;
+	clear: both;
+}
+fieldset.settings dl:after {
+	content: ".";
+	clear: both;
+	display: block;
+	visibility: hidden;
+	height: 0px;
 }
 fieldset.settings dl:hover dt{
 	border-right: 1px solid #000;
@@ -3544,7 +3552,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 }
 
 .dropdown li.focus {
-	background-color:#efefef !important;
+	background-color:#202020 !important;
 	color: #000;
 }
 
@@ -3721,4 +3729,14 @@ border-bottom:1px solid #000;
 	color:#292323 !important;
 	border:0px solid #000 !important;
 	border-radius: 6px 0px 0px 0px;
+}
+/*PortalModule Timeline*/
+.timeline-wrap {
+	background-color: #F7992B !important;
+}
+.timeline-event-node {
+	background: #FBE9A3!important;
+}
+.timeline-event-title span,.timeline-event-link a {
+	color:#F7992B!important;
 }
