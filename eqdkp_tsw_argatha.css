@@ -1137,7 +1137,7 @@ div[aria-describedby="dialog-login"] .password-forgot{
 }
 
 .ui-helper-reset{
-background-color:#2F2F2F
+background-color:#1d1d1d
 }
 
 .ui-widget {
@@ -2527,7 +2527,7 @@ a.tool-item i {
 }
 
 /* Notifications */
-.notification-bubble-red {
+.bubble-red {
 	background-color: rgba (0,0,0,0.1);
 	border:1.5px solid #B94A48;
 	margin-right: 4px;
@@ -2545,7 +2545,7 @@ a.tool-item i {
 	vertical-align: baseline;
 	white-space: nowrap;
 }
-.notification-bubble-yellow {
+.bubble-yellow {
 	background-color: rgba (0,0,0,0.1);
 	border:1.5px solid #F89406;
 	margin-right: 4px;
@@ -2564,7 +2564,7 @@ a.tool-item i {
 	white-space: nowrap;
 }
 
-.notification-bubble-green{
+.bubble-green{
 	background-color: rgba (0,0,0,0.1);
 	border:1.5px solid #3CE03F;
 	margin-right: 4px;
@@ -3611,17 +3611,17 @@ li.prio_2 {
 	border-left: 4px solid #B94A48;
 }
 
-.notification-bubble-green.filtered {
+.bubble-green.filtered {
 	background-color: #ddd !important;
 	border: 1px solid #468847 !important;
 }
 
-.notification-bubble-yellow.filtered {
+.bubble-yellow.filtered {
 	background-color: #ddd !important;
 	border: 1px solid #F89406 !important;
 }
 
-.notification-bubble-red.filtered {
+.bubble-red.filtered {
 	background-color: #ddd !important;
 	border: 1px solid #B94A48 !important;
 }
@@ -3666,7 +3666,13 @@ font-size:60%;
 [class*="viewraid status"]{
 font-size:60%;
 text-transform:uppercase; 
-margin-left:-0.6em;
+margin-left:0.1em;
+}
+[class*="viewraid status"]::before {
+content: "Raid";
+color: #d9d9d7;
+font-size: 1.5em;
+letter-spacing: -0pt;
 }
 .viewraid.status0{
 color:#00A400
@@ -3680,6 +3686,7 @@ color:#E80000
 .viewraid.status3{
 color:#800080
 }
+
 /*Chat Plugin*/
 .chatWindow, .chatWindowMenu{
 	background-color:#202020;
