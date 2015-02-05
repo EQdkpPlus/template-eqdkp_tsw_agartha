@@ -608,7 +608,7 @@ input[type=radio], input[type=checkbox]{
 
 .multilang-dropdown {
 	position: absolute;	
-	background-color: #EEEEEE;
+	background-color: #1d1d1d;
 	border: 1px solid #CCCCCC;
 	border-radius: 4px 0px 4px 4px;
 	margin-top: -4px;
@@ -1335,28 +1335,28 @@ ul.breamcrumb {
 
 ul.breamcrumb li {
 	float: left;
+	position: relative;
 }
 
 ul.breamcrumb a {
-	padding: 9px 1em 10px 2em;
-	float: left;
+	padding: 1em 1em 1em 2em;
+	display: block;
 	text-decoration: none;
 	color: #FFF;
 	position: relative;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.65);
 	background-color: #F7992B;
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), #F7992B);
-	margin-bottom: -1px;
 }
 
 ul.breamcrumb li:first-child a{
-	padding: 7px;
+	margin-bottom: -4px;
+	margin-top: -3px;
+	padding-left: 1em;
 }
 
 ul.breamcrumb li:first-child a i {
 	font-size: 1.5em;
-	margin-bottom: -1px;
-	margin-top: -1px;
 }
 
 ul.breamcrumb a:hover{
@@ -3135,6 +3135,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		float:none;
 		margin:0px;
 		padding:0px;
+		background:none;
 	}
 	
 	.responsive #titles h1 {
@@ -3208,9 +3209,8 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	}
 	
 	.responsive .breamcrumb li:first-child a {
-		border-right: 1px solid #ccc;
+		border-right: 1px solid #1D1D1D;
 		padding-right: 8px;
-		line-height: 27px;
 		padding-left: 8px !important;
 	}
 	
@@ -3258,7 +3258,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	}
 	
 	.responsive div.table {
-		display: inline;
+		display: table;
 	}
 	
 	.responsive button.ui-multiselect {
@@ -3304,14 +3304,14 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		display: none;
 		margin-bottom: 10px;
 		padding: 10px;
-		background-color: rgba(255,255,255,.95);
+		background-color: #1D1D1D;
 		border-right: 1px solid #bbb;
 		z-index: 999;
 	}
 	
 	.nav-mobile-closebtn {
-		background-color: #4E7FA8;
-		color: #fff;
+		background-color: #F7992B;
+		color: #1D1D1D;
 		border-radius: 4px;
 		position: fixed;
 		left: 70%;
@@ -3324,7 +3324,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	.mainmenu-mobile > li,  .nav-mobile-overlay .admin-headline, .adminmenu-mobile > li {
 		margin-bottom: 24px;
 		font-size: 18px;
-		color: #4E7FA8;
+		color: #F7992B;
 		font-weight: bold;
 	}
 	
@@ -3708,7 +3708,7 @@ color:#800080
 	color:#292323!important;
 	border-radius: 5px 5px 0px 0px;
 }
-.chatPost{
+.chatPost,.chatNewPost{
 border-top:1px solid #292323!important;
 }
 .chatOnlineSeperator{
