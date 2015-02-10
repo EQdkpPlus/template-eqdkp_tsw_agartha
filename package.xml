@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<install type="template" version="0.0.2">
+<install type="template" version="0.0.3">
 	<name>EQdkp TSW Argatha</name>
 	<author>Inkraja</author>
 	<authorEmail></authorEmail>
@@ -7,7 +7,7 @@
 	<creationDate>2015-01-01</creationDate>
 	<copyright>Inkraja</copyright>
 	<license>CC</license>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<description></description>
 	<folder>eqdkp_tsw_argatha</folder>
 </install>
