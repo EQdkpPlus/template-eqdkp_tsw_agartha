@@ -789,12 +789,15 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 /* general: positive/negative/neutral */
 .positive {
 	color: #33cc33;
+	text-shadow: 0px 0px 1px #000;
 }
 .negative {
 	color: #e23b30;
+	text-shadow: 0px 0px 1px #000;
 }
 .neutral {
 	color: #999;
+	text-shadow: 0px 0px 1px #000;
 }
 
 /* Hack for tinymce in colorswitch tables */
@@ -3744,4 +3747,9 @@ border-bottom:1px solid #000;
 }
 .timeline-event-title span,.timeline-event-link a {
 	color:#F7992B!important;
+}
+
+.closed {
+opacity: 0.3;
+text-decoration:line-through;
 }
