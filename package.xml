@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <install type="template" version="0.0.3">
-	<name>EQdkp TSW Argatha</name>
+	<name>EQdkp TSW Agartha</name>
 	<author>Inkraja</author>
 	<authorEmail></authorEmail>
 	<authorUrl>http://eqdkp-plus.eu</authorUrl>
 	<creationDate>2015-01-01</creationDate>
 	<copyright>Inkraja</copyright>
 	<license>CC</license>
-	<version>0.0.3</version>
+	<version>0.0.4</version>
 	<description></description>
-	<folder>eqdkp_tsw_argatha</folder>
+	<folder>eqdkp_tsw_agartha</folder>
 </install>

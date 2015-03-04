@@ -111,12 +111,13 @@ body.simple-header {
 }
 
 body {	
-	background:#0e0e0e url('TEMPLATE_IMAGE_PATH/background_body.png') no-repeat;
-	background-attachment: fixed;
+	background:#0e0e0e url('TEMPLATE_BACKGROUND') no-repeat;
+	background-attachment: T_BACKGROUND_POSITION;
 	background-size: 100% 100%;
+	background-position:0px 0px;
 	font-size: 13px;
 	font-family: Tahoma,Arial,Verdana,sans-serif;
-	color: var(--main-mainfontcolor);
+/*	color: var(--main-mainfontcolor);*/
 	color: #D9D7D7;
 	text-align: center;
 }
@@ -339,7 +340,7 @@ h3 {
 }
 
 #header {
-	background: transparent url('TEMPLATE_IMAGE_PATH/template_background.jpg') no-repeat center bottom;
+	background: transparent url('TEMPLATE_IMAGE_PATH/template_header.jpg') no-repeat center bottom;
 	background-size: cover;
 	display:block;
 	width: 100%;
@@ -1886,6 +1887,9 @@ font-size:inherit !important;
 	color: #B3B3B3;
 	font-size: 16px;
 }
+.article-container.featured {
+	display: block;
+}
 .article-container.featured h2:before {
 	content: "\f005";
 	font-family: FontAwesome;
@@ -2684,7 +2688,7 @@ ul#mychars-points-tooltip.dropdown-menu li table tbody tr td a {
 	max-height: 16px;
 }
 
-.fe-tooltip-container, .notification-tooltip-container, .user-tooltip-container,.mychars-points-tooltip-container {
+.fe-tooltip-container, .notification-tooltip-container, .user-tooltip-container,.mychars-points-tooltip-container, .langswitch-tooltip-container {
 	display: inline;
 	position: relative;
 }
@@ -2697,7 +2701,7 @@ ul#mychars-points-tooltip.dropdown-menu li table tbody tr td a {
 	min-width: 160px;
 }
 
-.fe-tooltip, .notification-tooltip, .user-tooltip, .mychars-points-tooltip {
+.fe-tooltip, .notification-tooltip, .user-tooltip, .mychars-points-tooltip, .langswitch-tooltip-container {
 	display: none;
 }
 
@@ -3105,7 +3109,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		font-size: 24px;
 	}
 	
-	.responsive .notification-tooltip-container {
+	.responsive .notification-tooltip-container, .responsive .langswitch-tooltip-container {
 		position: static;
 	}
 	
@@ -3431,6 +3435,10 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	
 	.responsive .ui-notify {
 		max-width: 95%;
+	}
+	
+	.responsive .langswitch-tooltip-trigger > span {
+		display: none;
 	}
 }
 
