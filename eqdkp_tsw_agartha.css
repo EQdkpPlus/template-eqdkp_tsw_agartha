@@ -2633,7 +2633,7 @@ a.tool-item i {
 	left: -5px;
 	list-style: none outside none;
 	margin: 2px 0 0;
-	min-width: 160px;
+	min-width: 300px;
 	padding: 5px 0;
 	position: absolute;
 	top: 30px;
@@ -3584,7 +3584,6 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 /*new Notification mod Rev 14824*/
 .notification-tooltip-container .dropdown-menu {
 	min-width: 300px;
-	
 }
 
 #personalAreaUser ul.dropdown-menu li.notification-action-bar{
