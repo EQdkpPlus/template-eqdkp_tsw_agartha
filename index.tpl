@@ -21,6 +21,16 @@
 		{RSS_FEEDS}
 		<style type="text/css">
 			{CSS_CODE}
+			<!-- IF T_BACKGROUND_TYPE > 0 -->
+			body {
+				background:#000000 url('{TEMPLATE_BACKGROUND}') no-repeat center top;
+				background-attachment: {T_BACKGROUND_POSITION};
+			}
+			
+			#wrapper header {
+				background: none !important;
+			}
+			<!-- ENDIF -->
 		</style>
 		
 		<script type="text/javascript">
@@ -42,7 +52,7 @@
 			var user_clock_format = "dddd, {USER_DATEFORMAT_LONG} {USER_TIMEFORMAT}";
 			var user_timezone = "{USER_TIMEZONE}";
 			
-			var mymoment = moment(user_timestamp_atom).utcOffset(user_timezone)
+			var mymoment = moment(user_timestamp_atom).utcOffset(user_timezone);
 			function user_clock(){	
 				var mydate = mymoment.format(user_clock_format);
 				$('.user_time').html(mydate);
@@ -125,6 +135,7 @@
 				//5 Minute
 				window.setTimeout("notification_update()", 1000*60*5);
 			}
+
 			function change_style(){
 				$('<div>').html('<div class="style-switch-container"><i class="fa fa-lg fa-spin fa-spinner"></i></div>').dialog(
 					{ open: function( event, ui ) {
@@ -197,13 +208,14 @@
 				favicon = new Favico({animation:'none'});
 				notification_favicon({NOTIFICATION_COUNT_RED}, {NOTIFICATION_COUNT_YELLOW}, {NOTIFICATION_COUNT_GREEN});
 				
-				$('.user-tooltip-trigger').on('click', function(event){
+				$('.tooltip-trigger').on('click', function(event){
 					event.preventDefault();
-					$("#user-tooltip").show('fast');
+					var mytooltip = $(this).data('tooltip');
+					$("#"+mytooltip).show('fast');
 					$(document).on('click', function(event) {
-						var count = $(event.target).parents('.user-tooltip-container').length;
+						var count = $(event.target).parents('.'+mytooltip+'-container').length;
 						if (count == 0){
-							$("#user-tooltip").hide('fast');
+							$("#"+mytooltip).hide('fast');
 						}
 					});
 				});
@@ -211,27 +223,6 @@
 				$('.user-tooltip-trigger').on('dblclick', function(event){
 					$("#user-tooltip").hide('fast');
 					window.location="{EQDKP_CONTROLLER_PATH}Settings{SEO_EXTENSION}{SID}";
-				});
-				
-				$('.mychars-points-tooltip-trigger').on('click', function(event){
-					event.preventDefault();
-					$("#mychars-points-tooltip").show('fast');
-					$(document).on('click', function(event) {
-						var count = $(event.target).parents('.mychars-points-tooltip-container').length;
-						if (count == 0){
-							$("#mychars-points-tooltip").hide('fast');
-						}
-					});
-				});
-				$('.langswitch-tooltip-trigger').on('click', function(event){
-					event.preventDefault();
-					$("#langswitch-tooltip").show('fast');
-					$(document).on('click', function(event) {
-						var count = $(event.target).parents('.langswitch-tooltip-container').length;
-						if (count == 0){
-							$("#langswitch-tooltip").hide('fast');
-						}
-					});
 				});
 				
 				$('ul.mainmenu li.link_li_indexphp a.link_indexphp, ul.mainmenu li.link_li_entry_home a.link_entry_home').html('');
@@ -285,9 +276,10 @@
 					<ul>
 						<li><a href="{EQDKP_CONTROLLER_PATH}Login{SEO_EXTENSION}{SID}" class="openLoginModal" onclick="return false;"><i class="fa fa-sign-in fa-lg"></i> {L_login}</a></li>
 						<!-- IF U_REGISTER != "" --><li>{U_REGISTER}</li><!-- ENDIF -->
+						
 						<li>
 							<div class="langswitch-tooltip-container">
-								<a href="#" class="langswitch-tooltip-trigger">{USER_LANGUAGE_NAME}</a>
+								<a href="#" class="langswitch-tooltip-trigger tooltip-trigger" data-tooltip="langswitch-tooltip">{USER_LANGUAGE_NAME}</a>
 								<ul class="dropdown-menu langswitch-tooltip" role="menu" id="langswitch-tooltip">
 									<!-- BEGIN languageswitcher_row -->
 									<li><a href="{languageswitcher_row.LINK}">{languageswitcher_row.LANGNAME}</a></li>
@@ -295,6 +287,7 @@
 								</ul>
 							</div>
 						</li>
+						
 						<!-- BEGIN personal_area_addition -->
 						<li>{personal_area_addition.TEXT}</li>
 						<!-- END personal_area_addition -->
@@ -304,7 +297,7 @@
 						<ul>
 							<li>
 								<div class="user-tooltip-container">
-									<a href="{EQDKP_CONTROLLER_PATH}Settings{SEO_EXTENSION}{SID}" class="user-tooltip-trigger"><i class="fa fa-user fa-lg"></i> <span class="hiddenSmartphone">{USER_NAME}</span></a>
+									<a href="{EQDKP_CONTROLLER_PATH}Settings{SEO_EXTENSION}{SID}" class="user-tooltip-trigger tooltip-trigger" data-tooltip="user-tooltip"><i class="fa fa-user fa-lg"></i> <span class="hiddenSmartphone">{USER_NAME}</span></a>
 									<ul class="dropdown-menu user-tooltip" role="menu" id="user-tooltip">
 										<li><a href="{U_USER_PROFILE}">
 												<div class="user-tooltip-avatar">
@@ -329,7 +322,7 @@
 							<!-- IF S_MYCHARS_POINTS and U_CHARACTERS != "" -->
 								<li class="hiddenSmartphone">
 									<div class="mychars-points-tooltip-container">
-									<a class="mychars-points-tooltip-trigger"><i class="fa fa-trophy fa-lg"></i> <span class="mychars-points-target"></span></a>
+									<a class="mychars-points-tooltip-trigger tooltip-trigger" data-tooltip="mychars-points-tooltip"><i class="fa fa-trophy fa-lg"></i> <span class="mychars-points-target"></span></a>
 									<ul class="dropdown-menu mychars-points-tooltip" role="menu" id="mychars-points-tooltip"><li>
 										<table>
 										<!-- BEGIN mychars_points -->
@@ -349,15 +342,15 @@
 							<li>
 								<div class="notification-tooltip-container">
 									<a class="notification-tooltip-trigger"><i class="fa fa-bolt fa-lg"></i> <span class="hiddenSmartphone">{L_notifications}</span></a>
-									<span class="notification-tooltip-trigger bubble-red hand" <!-- IF NOTIFICATION_COUNT_RED == 0 -->style="display:none;"<!-- ENDIF --> >{NOTIFICATION_COUNT_RED}</span>
-									<span class="notification-tooltip-trigger bubble-yellow hand" <!-- IF NOTIFICATION_COUNT_YELLOW == 0 -->style="display:none;"<!-- ENDIF -->>{NOTIFICATION_COUNT_YELLOW}</span>
-									<span class="notification-tooltip-trigger bubble-green hand" <!-- IF NOTIFICATION_COUNT_GREEN == 0 -->style="display:none;"<!-- ENDIF -->>{NOTIFICATION_COUNT_GREEN}</span>
+									<span class="notification-tooltip-trigger bubble-red notification-bubble-red hand" <!-- IF NOTIFICATION_COUNT_RED == 0 -->style="display:none;"<!-- ENDIF --> >{NOTIFICATION_COUNT_RED}</span>
+									<span class="notification-tooltip-trigger bubble-yellow notification-bubble-yellow hand" <!-- IF NOTIFICATION_COUNT_YELLOW == 0 -->style="display:none;"<!-- ENDIF -->>{NOTIFICATION_COUNT_YELLOW}</span>
+									<span class="notification-tooltip-trigger bubble-green notification-bubble-green hand" <!-- IF NOTIFICATION_COUNT_GREEN == 0 -->style="display:none;"<!-- ENDIF -->>{NOTIFICATION_COUNT_GREEN}</span>
 									<ul class="dropdown-menu notification-tooltip" role="menu" id="notification-tooltip-all">
 										<li class="notification-action-bar"> 
 											<div class="floatLeft">
-												<span class="bubble-red notification-filter hand" <!-- IF NOTIFICATION_COUNT_RED == 0 -->style="display:none;"<!-- ENDIF --> >{NOTIFICATION_COUNT_RED}</span>
-												<span class="bubble-yellow notification-filter hand" <!-- IF NOTIFICATION_COUNT_YELLOW == 0 -->style="display:none;"<!-- ENDIF -->>{NOTIFICATION_COUNT_YELLOW}</span>
-												<span class="bubble-green notification-filter hand" <!-- IF NOTIFICATION_COUNT_GREEN == 0 -->style="display:none;"<!-- ENDIF -->>{NOTIFICATION_COUNT_GREEN}</span>
+												<span class="bubble-red notification-bubble-red notification-filter hand" <!-- IF NOTIFICATION_COUNT_RED == 0 -->style="display:none;"<!-- ENDIF --> >{NOTIFICATION_COUNT_RED}</span>
+												<span class="bubble-yellow notification-bubble-yellow notification-filter hand" <!-- IF NOTIFICATION_COUNT_YELLOW == 0 -->style="display:none;"<!-- ENDIF -->>{NOTIFICATION_COUNT_YELLOW}</span>
+												<span class="bubble-green notification-bubble-green notification-filter hand" <!-- IF NOTIFICATION_COUNT_GREEN == 0 -->style="display:none;"<!-- ENDIF -->>{NOTIFICATION_COUNT_GREEN}</span>
 											</div>
 												
 											<div class="floatRight">
@@ -521,22 +514,38 @@
 					<!-- ENDIF -->
 				</div>
 			</div>
-		
+			
+			<footer id="contentFooter">
+				<div class="floatLeft">
+					<!-- IF S_REPONSIVE -->
+					<div class="hiddenDesktop toggleResponsive"><a href="{SID}&toggleResponsive=desktop"><i class="fa fa-lg fa-desktop"></i> {L_desktop_version}</a></div>
+					<!-- ELSE -->
+					<div class="toggleResponsive"><a href="{SID}&toggleResponsive=mobile"><a href="{SID}&toggleResponsive=mobile"><i class="fa fa-lg fa-mobile-phone"></i> {L_mobile_version}</a></div>
+					<!-- ENDIF -->
+				</div>
+				<div class="floatRight">
+					<!-- IF not S_LOGGED_IN -->
+					<a href="javascript:change_style();"><i class="fa fa-paint-brush"></i> {L_change_style}</a>
+					<!-- ENDIF -->
+					
+					<!-- IF S_GLOBAL_RSSFEEDS -->
+					<div class="rss-tooltip-container">
+						<a class="rss-tooltip-trigger tooltip-trigger" data-tooltip="rss-tooltip"><i class="fa hand fa-rss fa-lg"></i></a>
+						<ul class="dropdown-menu right-bottom rss-tooltip" role="menu" id="rss-tooltip">
+							<!-- BEGIN global_rss_row -->
+							<li><a href="{global_rss_row.LINK}"><i class="fa hand fa-rss fa-lg"></i> {global_rss_row.NAME}</a></li>
+							<!-- END global_rss_row -->
+						</ul>
+					</div>
+					<!-- ENDIF -->
+				</div>
+			</footer>
 		</section>
 		
 		<footer id="footer">
 				{PORTAL_BLOCK2}
-				<!-- IF not S_LOGGED_IN -->
-				<div class="floatRight"><a href="javascript:change_style();"><i class="fa fa-paint-brush"></i> {L_change_style}</a></div>
-				<!-- ENDIF -->
-				<!-- IF S_REPONSIVE -->
-				<div class="hiddenDesktop toggleResponsive"><a href="{SID}&toggleResponsive=desktop"><i class="fa fa-lg fa-desktop"></i> {L_desktop_version}</a></div>
-				<!-- ELSE -->
-				<div class="toggleResponsive"><a href="{SID}&toggleResponsive=mobile"><a href="{SID}&toggleResponsive=mobile"><i class="fa fa-lg fa-mobile-phone"></i> {L_mobile_version}</a></div>
-				<!-- ENDIF -->
 				{EQDKP_PLUS_COPYRIGHT}
-				{TEMPLATE_GAME_COPYRIGHT}
-				<br>
+								<br>
 			<div class="copyright">© 2007-2012, "The Secret World"™ is a registered trademark of Funcom Gmbh 2012. All rights reserved. All logos, characters, names and distinctive likenesses thereof are intellectual property of Funcom GmBH unless otherwise noted. All other trademarks are the property of their respected owners.</div><br>
 				<a target="new" href="http://www.funcom.com"><img border="0" src="{TEMPLATE_PATH}/images/footer-logo-funcom.png" alt="Funcom" /></a>
 				<a target="new" href="http://www.ea.com"><img border="0" src="{TEMPLATE_PATH}/images/footer-logo-ea.png" alt="Electronic Arts" /></a>
@@ -602,7 +611,8 @@
 				favicon.reset();
 			}
    		 });
-	</script>		
+	</script>
+	{FOOTER_CODE}
 	<a id="bottom"></a>
 	</body>
 </html>
