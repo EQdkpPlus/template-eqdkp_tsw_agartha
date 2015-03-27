@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<settings styleversion="0.0.5">	
+<settings styleversion="0.0.6">	
 	<template_path>eqdkp_tsw_agartha</template_path>
 	<body_background>#0e0e0e</body_background>
 	<body_link>#FFCF02</body_link>
