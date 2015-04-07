@@ -951,7 +951,7 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 }
 
 .rowHover, table tr.marked th, table tr.marked , .hoverrows tr:hover, .hoverrows > div:hover{
-	background-color: #2F2F2F;
+	background-color: rgba(0,0,0, 0.4);
 }
 
 /* general: bbcode */
@@ -2384,7 +2384,9 @@ div.comment_author {
 	font-size: 11px;
 }
 div.comment_author a{color:#F7992B}
-
+.comment_text blockquote {
+	margin-right: 20px;
+}
 #comment_button, .reply-trigger,.reply_button {
 	margin-left: 130px;
 }
@@ -3739,6 +3741,40 @@ li.prio_2 {
 	padding-left: 6px;
 }
 
+button.thirdpartylogin.facebook {
+	background: #3b5998;
+	color: #fff;
+	border-radius: 3px;
+	border-color: transparent;
+}
+
+button.thirdpartylogin.google {
+	background: #dd4b39;
+	color: #fff;
+	border-radius: 3px;
+	border-color: transparent;
+}
+
+button.thirdpartylogin.battlenet {
+	background: #0e98d8;
+	color: #fff;
+	border-radius: 3px;
+	border-color: transparent;
+}
+
+button.thirdpartylogin.persona {
+	background: #448bc9;
+	color: #fff;
+	border-radius: 3px;
+	border-color: transparent;
+}
+
+button.thirdpartylogin.openid {
+	background: #d5d5d5;
+	color: #000;
+	border-radius: 3px;
+	border-color: transparent;
+}
 .elfinder .elfinder-navbar {
 	background-color: #131313 !important;
 }
