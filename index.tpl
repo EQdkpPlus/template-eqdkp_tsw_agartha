@@ -310,6 +310,9 @@
 											</a>
 										</li>
 										<li class="tooltip-divider"></li>
+										<!-- BEGIN user_tooltip_addition -->
+										<li class="{user_tooltip_addition.CLASS}">{user_tooltip_addition.TEXT}</li>
+										<!-- END user_tooltip_addition -->
 										<li><a href="{EQDKP_CONTROLLER_PATH}Settings{SEO_EXTENSION}{SID}"><i class="fa fa-cog fa-lg"></i> {L_settings}</a></li>
 										<li><a href="{U_LOGOUT}"><i class="fa fa-sign-out fa-lg"></i> {L_logout}</a></li>
 									</ul>
@@ -524,7 +527,7 @@
 					<!-- ENDIF -->
 				</div>
 				<div class="floatRight">
-					<!-- IF not S_LOGGED_IN -->
+					<!-- IF not S_LOGGED_IN and S_STYLECHANGER -->
 					<a href="javascript:change_style();"><i class="fa fa-paint-brush"></i> {L_change_style}</a>
 					<!-- ENDIF -->
 					
@@ -545,10 +548,10 @@
 		<footer id="footer">
 				{PORTAL_BLOCK2}
 				{EQDKP_PLUS_COPYRIGHT}
-								<br>
+				<br>
 			<div class="copyright">© 2007-2012, "The Secret World"™ is a registered trademark of Funcom Gmbh 2012. All rights reserved. All logos, characters, names and distinctive likenesses thereof are intellectual property of Funcom GmBH unless otherwise noted. All other trademarks are the property of their respected owners.</div><br>
 				<a target="new" href="http://www.funcom.com"><img border="0" src="{TEMPLATE_PATH}/images/footer-logo-funcom.png" alt="Funcom" /></a>
-				<a target="new" href="http://www.ea.com"><img border="0" src="{TEMPLATE_PATH}/images/footer-logo-ea.png" alt="Electronic Arts" /></a>
+				<a target="new" href="http://www.ea.com"><img border="0" src="{TEMPLATE_PATH}/images/footer-logo-ea.png" alt="Electronic Arts" /></a></div>
 		</footer><!-- close footer -->
 	</div><!-- close wrapper -->
 	
