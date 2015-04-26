@@ -1628,9 +1628,9 @@ ul.breamcrumb .current::before{
 	font-size: 12px;
 	padding: .3em 1em .32em;
 	background: #F7992B;
-	background: -webkit-gradient(linear, left top, left bottom, from(#F7992B), to(rgba (0,0,0,0.65)));
-	background: -moz-linear-gradient(top, #F7992B, rgba (0,0,0,0.65));
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7992B', endColorstr='rgba (0,0,0,0.65)');
+	background: -webkit-gradient(linear, left top, left bottom, from(#F7992B), to(rgba(0,0,0,0.65)));
+	background: -moz-linear-gradient(top, #F7992B, rgba(0,0,0,0.65));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7992B', endColorstr='rgba(0,0,0,0.65)');
 	color: #FFF;
 	border: solid 1px #292323;
 	vertical-align: baseline;
@@ -1666,10 +1666,10 @@ ul.breamcrumb .current::before{
 }
 
 .sf-ddm li.sfHover {
-	background: rgba (0,0,0,0.65);
-	background: -webkit-gradient(linear, left top, left bottom, from(#F7992B), to(rgba (0,0,0,0.65)));
-	background: -moz-linear-gradient(top, #F7992B, rgba (0,0,0,0.65));
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7992B', endColorstr='rgba (0,0,0,0.65)');
+	background: rgba 0,0,0,0.65;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F7992B), to(rgba 0,0,0,0.65));
+	background: -moz-linear-gradient(top, #F7992B, rgba 0,0,0,0.65);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7992B', endColorstr='rgba 0,0,0,0.65');
 }
 
 .sf-menu.sf-ddm ul {
@@ -1719,9 +1719,9 @@ ul.breamcrumb .current::before{
 	font-size: 12px;
 	padding: .3em 1em .32em;
 	background: #F7992B;
-	background: -webkit-gradient(linear, left top, left bottom, from(#F7992B), to(rgba (0,0,0,0.65)));
-	background: -moz-linear-gradient(top, #F7992B, rgba (0,0,0,0.65));
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7992B', endColorstr='rgba (0,0,0,0.65)');
+	background: -webkit-gradient(linear, left top, left bottom, from(#F7992B), to(rgba(0,0,0,0.65)));
+	background: -moz-linear-gradient(top, #F7992B, rgba(0,0,0,0.65));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7992B', endColorstr='rgba(0,0,0,0.65)');
 	color: #FFF;
 	border: solid 1px #292323;
 	vertical-align: baseline;
@@ -1757,10 +1757,10 @@ ul.breamcrumb .current::before{
 }
 
 .sf-btn-ddm li.sfHover {
-	background: rgba (0,0,0,0.65);
-	background: -webkit-gradient(linear, left top, left bottom, from(#F7992B), to(rgba (0,0,0,0.65)));
-	background: -moz-linear-gradient(top, #F7992B, rgba (0,0,0,0.65));
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7992B', endColorstr='rgba (0,0,0,0.65)');
+	background: rgba(0,0,0,0.65);
+	background: -webkit-gradient(linear, left top, left bottom, from(#F7992B), to(rgba(0,0,0,0.65)));
+	background: -moz-linear-gradient(top, #F7992B, rgba(0,0,0,0.65));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7992B', endColorstr='rgba(0,0,0,0.65)');
 }
 
 .sf-menu.sf-btn-ddm ul{
@@ -2106,7 +2106,7 @@ table.guesttable td{
 	color:black;
 	background: rgba(255, 255, 255, 0.3);
 }
-}
+
 .style1 {
 	text-align: center;
 }
@@ -2574,7 +2574,7 @@ a.tool-item i {
 
 /* Notifications */
 .bubble-red {
-	background-color: rgba (0,0,0,0.1);
+	background-color: rgba(0,0,0,0.1);
 	border:1.5px solid #B94A48;
 	margin-right: 4px;
 	padding-right: 9px;
@@ -2592,7 +2592,7 @@ a.tool-item i {
 	white-space: nowrap;
 }
 .bubble-yellow {
-	background-color: rgba (0,0,0,0.1);
+	background-color: rgba(0,0,0,0.1);
 	border:1.5px solid #F89406;
 	margin-right: 4px;
 	padding-right: 9px;
@@ -2611,7 +2611,7 @@ a.tool-item i {
 }
 
 .bubble-green{
-	background-color: rgba (0,0,0,0.1);
+	background-color: rgba(0,0,0,0.1);
 	border:1.5px solid #3CE03F;
 	margin-right: 4px;
 	padding-right: 9px;
@@ -3119,7 +3119,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	margin-bottom: 15px;
 }
 .panel-heading {
-	background-color: #rgba(0, 0, 0, 0.65);
+	background-color: rgba(0, 0, 0, 0.65);
 	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0px, rgba(0, 0, 0, 0.65) 100%);
 	background-repeat: repeat-x;
 	border-color: #1D1D1D;
@@ -3345,7 +3345,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		margin-bottom: 10px;
 	}
 	
-	.responsive div.table:not(.noMobileTransform)) {
+	.responsive div.table:not(.noMobileTransform) {
 		display: table;
 	}
 	
@@ -3649,7 +3649,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 .simple-header .ui-dialog {
 	max-width: 90%;
 }
-}
+
 
 /*new Notification mod Rev 14824*/
 .notification-tooltip-container .dropdown-menu {
@@ -3905,3 +3905,5 @@ text-decoration:line-through;
 .whoisonline_portal .portalbox_content .td, .whoisonline_portal .portalbox_content { padding: 3px 4px; }
 
 /***************************************************
+ *Portalxx
+ **************************************************/
