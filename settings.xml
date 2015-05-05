@@ -22,7 +22,7 @@
 	<container_border_color>rgb(56, 56, 56)</container_border_color>
 	<content_background_color>rgb(255, 255, 255)</content_background_color>
 	<content_font_color>rgb(159, 159, 159)</content_font_color>
-	<content_font_color_headings>rgb(217, 215, 215)</content_font_color_headings>
+	<content_font_color_headings>rgb(255, 207, 2)</content_font_color_headings>
 	<content_link_color>rgb(255, 207, 2)</content_link_color>
 	<content_link_color_hover>rgb(0, 0, 0)</content_link_color_hover>
 	<content_border_color>rgb(41, 35, 35)</content_border_color>
@@ -68,7 +68,7 @@
 	<content_contrast_color>rgb(0, 0, 0)</content_contrast_color>
 	<content_contrast_background_color>rgb(252, 253, 254)</content_contrast_background_color>
 	<content_contrast_border_color>rgb(204, 204, 204)</content_contrast_border_color>
-	<content_positive_color>rgb(51, ,204, 51)</content_positive_color>
+	<content_positive_color>rgb(51, 204, 51)</content_positive_color>
 	<content_negative_color>rgb(226, 59, 48)</content_negative_color>
 	<content_neutral_color>rgb(153, 153, 153)</content_neutral_color>
 	
