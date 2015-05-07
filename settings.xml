@@ -66,7 +66,7 @@
 	<input_font_color_active>rgb(85, 85, 85)</input_font_color_active>
 	
 	<content_contrast_color>rgb(0, 0, 0)</content_contrast_color>
-	<content_contrast_background_color>rgb(252, 253, 254)</content_contrast_background_color>
+	<content_contrast_background_color>rgba(252, 253, 254, 0.2)</content_contrast_background_color>
 	<content_contrast_border_color>rgb(204, 204, 204)</content_contrast_border_color>
 	<content_positive_color>rgb(51, 204, 51)</content_positive_color>
 	<content_negative_color>rgb(226, 59, 48)</content_negative_color>
