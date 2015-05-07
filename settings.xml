@@ -1,44 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<settings styleversion="0.0.8">	
+<settings styleversion="0.1.0">	
 	<template_path>eqdkp_tsw_agartha</template_path>
-	<body_background>#0e0e0e</body_background>
-	<body_link>#FFCF02</body_link>
-	<body_link_style>none</body_link_style>
-	<body_hlink>#000</body_hlink>
-	<body_hlink_style>none</body_hlink_style>
-	<header_link>#FFFFFF</header_link>
-	<header_link_style>none</header_link_style>
-	<header_hlink>#FFCF02</header_hlink>
-	<header_hlink_style>none</header_hlink_style>
-	<tr_color1>#7D7D7D</tr_color1>
-	<tr_color2>#303030</tr_color2>
-	<th_color1>#D9D7D7</th_color1>
-	<fontface1>Verdana, Arial, Helvetica, sans-serif</fontface1>
-	<fontface2>Verdana, Arial, Helvetica, sans-serif</fontface2>
-	<fontface3>Verdana, Arial, Helvetica, sans-serif</fontface3>
-	<fontsize1>10</fontsize1>
-	<fontsize2>11</fontsize2>
-	<fontsize3>12</fontsize3>
-	<fontcolor1>#D9D7D7</fontcolor1>
-	<fontcolor2>#FFFFFF</fontcolor2>
-	<fontcolor3>#000000</fontcolor3>
-	<fontcolor_neg>#FF0000</fontcolor_neg>
-	<fontcolor_pos>#008800</fontcolor_pos>
-	<table_border_width>1</table_border_width>
-	<table_border_color>#999999</table_border_color>
-	<table_border_style>solid</table_border_style>
-	<input_color>#292323</input_color>
-	<input_border_width>1</input_border_width>
-	<input_border_color>#F7992B</input_border_color>
-	<input_border_style>solid</input_border_style>
 	<attendees_columns>6</attendees_columns>
 	<logo_position>center</logo_position>
-	<background_pos>fixed</background_pos>
-	<background_type>0</background_type>
-	<css_file></css_file>
-	<use_db_vars>1</use_db_vars>
-	<portal_width>0px</portal_width>
+	<background_img></background_img>
 	<column_right_width>0px</column_right_width>
 	<column_left_width>0px</column_left_width>
-
+	<portal_width>0px</portal_width>
+	<background_pos>fixed</background_pos>
+	<background_type>0</background_type>
+	
+	<body_background_color>rgb(14, 14, 14)</body_background_color>
+	<body_font_color>rgb(217,  215, 215)</body_font_color>
+	<body_font_size>13</body_font_size>
+	<body_font_family>Tahoma,Arial,Verdana,sans-serif</body_font_family>
+	<body_link_color>rgb(254, 254, 254)</body_link_color>
+	<body_link_color_hover>rgb(255, 255, 255)</body_link_color_hover>
+	<body_link_decoration>none</body_link_decoration>
+	
+	<container_background_color>rgb(224, 224, 224)</container_background_color>
+	<container_border_color>rgb(56, 56, 56)</container_border_color>
+	<content_background_color>rgb(255, 255, 255)</content_background_color>
+	<content_font_color>rgb(159, 159, 159)</content_font_color>
+	<content_font_color_headings>rgb(255, 207, 2)</content_font_color_headings>
+	<content_link_color>rgb(255, 207, 2)</content_link_color>
+	<content_link_color_hover>rgb(0, 0, 0)</content_link_color_hover>
+	<content_border_color>rgb(41, 35, 35)</content_border_color>
+	<content_accent_color>rgb(247, 153, 43)</content_accent_color>
+	
+	<userarea_background_color>rgb(69, 72, 77)</userarea_background_color>
+	<userarea_font_color>rgb(217, 215, 215)</userarea_font_color>
+	<userarea_link_color>rgb(217, 215, 215)</userarea_link_color>
+	<userarea_link_color_hover>rgb(255, 255, 255)</userarea_link_color_hover>
+	
+	<table_th_background_color>rgba(0, 0, 0, 0.65)</table_th_background_color>
+	<table_th_font_color></table_th_font_color>
+	<table_tr_font_color></table_tr_font_color>
+	<table_tr_background_color1>rgba(125, 125, 125,0)</table_tr_background_color1>
+	<table_tr_background_color2>rgba(125, 125, 125,0.55)</table_tr_background_color2>
+	<table_tr_background_color_hover>rgba(0, 0, 0,0.4)</table_tr_background_color_hover>
+	<table_border_color>rgb(41, 35, 35)</table_border_color>
+	
+	<menu_background_color>rgb(69, 72, 77)</menu_background_color>
+	<menu_font_color>rgb(217, 215, 215)</menu_font_color>
+	<menu_item_background_color>rgba(255, 255, 255, 0)</menu_item_background_color>
+	<menu_item_background_color_hover>rgba(0, 0, 0, 1)</menu_item_background_color_hover>
+	<menu_item_font_color_hover>rgba(217, 215, 215, 1)</menu_item_font_color_hover>
+	
+	<sidebar_background_color>rgb(234, 234, 234)</sidebar_background_color>
+	<sidebar_font_color>rgb(0, 0, 0)</sidebar_font_color>
+	<sidebar_border_color>rgb(204, 204, 204)</sidebar_border_color>
+	
+	<button_background_color>rgb(247, 153, 43)</button_background_color>
+	<button_font_color>rgb(255, 255, 255)</button_font_color>
+	<button_border_color>rgb(40, 35, 35)</button_border_color>
+	<button_background_color_hover>rgb(19, 19, 19)</button_background_color_hover>
+	<button_font_color_hover>rgb(255, 255, 255)</button_font_color_hover>
+	<button_border_color_hover>rgb(51, 51, 51)</button_border_color_hover>
+	
+	<input_background_color>rgb(255, 255, 255)</input_background_color>
+	<input_border_color>rgb(204, 204, 204)</input_border_color>
+	<input_font_color>rgb(85, 85, 85)</input_font_color>
+	<input_background_color_active>rgba(255, 255, 255, 1)</input_background_color_active>
+	<input_border_color_active>rgba(255, 255, 0, 0.8)</input_border_color_active>
+	<input_font_color_active>rgb(85, 85, 85)</input_font_color_active>
+	
+	<content_contrast_color>rgb(0, 0, 0)</content_contrast_color>
+	<content_contrast_background_color>rgba(252, 253, 254, 0.2)</content_contrast_background_color>
+	<content_contrast_border_color>rgb(204, 204, 204)</content_contrast_border_color>
+	<content_positive_color>rgb(51, 204, 51)</content_positive_color>
+	<content_negative_color>rgb(226, 59, 48)</content_negative_color>
+	<content_neutral_color>rgb(153, 153, 153)</content_neutral_color>
+	
+	<misc_color1>rgb(0, 0, 0)</misc_color1>
+	<misc_color2></misc_color2>
+	<misc_color3></misc_color3>
 </settings>
