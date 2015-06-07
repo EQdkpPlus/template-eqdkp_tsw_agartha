@@ -489,12 +489,17 @@
 							<!-- IF S_SHOW_COOKIE_HINT -->
 							<div class="infobox infobox-large infobox-blue clearfix">
 								<i class="fa-info-circle fa pull-left fa-2x"></i> {COOKIE_HINT}
+								<i class="fa-times fa pull-right hand" onclick="$(this).parent().hide()"></i>
 							</div>
-							<!-- ENDIF -->	
+							<!-- ENDIF -->
+
 							<!-- BEGIN global_warnings -->
 							<header>
 								<div class="infobox infobox-large infobox-{global_warnings.CLASS} clearfix">
 									<i class="{global_warnings.ICON} fa-4x pull-left"></i> {global_warnings.MESSAGE}
+									<!-- IF global_warnings.S_DISMISS -->
+									<i class="fa-times fa pull-right hand" onclick="$(this).parent().hide()"></i>
+									<!-- ENDIF -->
 								</div>
 							</header>
 							<!-- END global_warnings -->	
