@@ -1,5 +1,5 @@
 /* Project: EQdkp-Plus
-* Package: The Secret World Template Package - Style Argatha
+* Package: The Secret World Template Package - Style Agartha
 * Link: http://eqdkp-plus.eu
 *
 * Copyright (C) 2006-2015 EQdkp-Plus Developer Team
@@ -456,7 +456,9 @@ h3 {
 	background-color: @eqdkpContentContrastBackgroundColor;
 	border-color: @eqdkpContentContrastBorderColor;
 }
-
+.contentContrast h1, .contentContrast h2, .contentContrast h3 {
+	color: @eqdkpContentContrastColor;
+}
 #contentFooter a, #contentFooter a:visited, #contentFooter a:hover{
 	color: #fff;
 	text-decoration: none;
@@ -545,7 +547,7 @@ h3 {
 	content:"\f054";
 	font-family: FontAwesome;
 	margin-right: 5px;
-	color: #000;
+	color: #D9D7D7;
 	font-size: 10px;
 }
 .menu li{
@@ -1216,8 +1218,9 @@ background-color:#1d1d1d
 text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
 }
 
-.sortable li.mjs-nestedSortable-leaf div, .sortable li div{
-background: rgba(0, 0, 0, 0.65) !important;
+.sortable li.mjs-nestedSortable-leaf div, .sortable li div,.sortable li.mjs-nestedSortable-branch div{
+	background: -moz-linear-gradient(top,  @eqdkpBodyBackgroundColor 0%, lighten(@eqdkpBodyBackgroundColor,2) 47%, spin(@eqdkpBodyBackgroundColor,30) 100%);
+	background: -webkit-linear-gradient(top,  @eqdkpBodyBackgroundColor 0%,lighten(@eqdkpBodyBackgroundColor,2) 47%,spin(@eqdkpBodyBackgroundColor,30) 100%);
 }
 
 /* general: information boxes NEW */
@@ -2537,6 +2540,9 @@ td.hiddenSmartphone, th.hiddenSmartphone {
 }
 
 /* Social Bookmarks */
+.social-bookmarks {
+	list-style-type: none !important;
+}
 .social-bookmarks li {
 	float: left;
 	margin-right: 7px;
@@ -2554,9 +2560,20 @@ td.hiddenSmartphone, th.hiddenSmartphone {
 	position: relative;
 }
 
-.social-bookmarks li a.social-bookmarks-count i{
+.social-bookmarks li a.social-bookmarks-count i, .social-bookmarks li a.social-bookmarks-nocount i{
 	font-size: 18px;
 	vertical-align: middle;
+}
+
+.social-bookmarks li a.social-bookmarks-nocount {
+	font-size: 12px;
+	padding: 2px 4px 2px 4px;
+	text-decoration: none;
+	display: block;
+	color: #fff;
+	padding-left: 5px;
+	border-radius: 4px;
+	position: relative;
 }
 
 .social-bookmarks a.twitter {
@@ -2583,6 +2600,21 @@ td.hiddenSmartphone, th.hiddenSmartphone {
 .social-bookmarks a.gplus:hover {
 	background-color: #f75b44;
 
+}
+.social-bookmarks a.whatsapp {
+	background-color: #42aa42;
+}
+
+.social-bookmarks .whatsapp_share {
+	display: none;
+}
+
+.social-bookmarks a.whatsapp:hover {
+	background-color: #268132;
+}
+
+.ismobiledevice .social-bookmarks .whatsapp_share {
+	display: block;
 }
 
 .social-bookmarks .share-count {
@@ -3620,6 +3652,10 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		width: auto !important;
 		border-top: 1px solid @eqdkpSidebarBorderColor;
 	}
+			
+	.responsive #personalAreaUser .user-avatar-smallest>img {
+		margin-top: 4px;
+	}
 }
 
 @media all and (max-width: 590px) {
@@ -3667,7 +3703,18 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	.responsive .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
 		float: none;
 	}
+	
+	.responsive .share-text {
+		display: none;
+	}
+	
+	.responsive .social-bookmarks li a.social-bookmarks-count {
+		width: 50px;
+	}
 
+	.responsive #personalAreaUser ul li {
+		margin-right: 10px;
+	}
 }
 
 
