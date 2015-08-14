@@ -567,6 +567,10 @@ h3 {
 	font-size: 14px;
 }
 
+ul.mainmenu > li {
+	float: left;
+}
+
 ul.mainmenu li a.link_indexphp:before, ul.mainmenu li a.link_entry_home:before {
 	content:"\f015";
 	font-family: FontAwesome;
@@ -1378,6 +1382,7 @@ ul.breamcrumb {
 	border-radius: 3px 3px 3px 3px;
 	overflow: hidden;
 	width: 100%;
+	float:left;
 }
 
 ul.breamcrumb li {
@@ -2083,6 +2088,9 @@ fieldset.settings.floatRight.raid input[type="text"]{
 	vertical-align:middle;
 	margin:0;
 }
+.attendee_awaymode{
+	background-color: rgba(62, 0, 0, 0.8);
+}
 #bottommenu_chars{
 	height: 70px;
 	clear: both;
@@ -2664,7 +2672,9 @@ td.hiddenSmartphone, th.hiddenSmartphone {
 	border-radius: 4px 4px 4px 4px;
 	background-color: #FFFFFF;
 }
-
+.awaytt_row{
+	margin: 8px 0px;
+}
 /* Toolbar */
 .toolbar {
 	cursor: pointer;
@@ -2813,7 +2823,7 @@ a.tool-item i {
 	color: #666;
 }
 
-#personalArea .dropdown-menu li > a, .rss-tooltip.dropdown-menu li > a {
+#personalArea .dropdown-menu li > a, .rss-tooltip.dropdown-menu li > a, #personalArea .dropdown-menu li > span.nolink {
 	clear: both;
 	color: #333333;
 	display: block;
@@ -2825,6 +2835,10 @@ a.tool-item i {
 
 ul#mychars-points-tooltip.dropdown-menu li table tbody tr td a {
 	color: #333;
+}
+
+.user_tooltip_awaymode span.nolink {
+	color: red !important;
 }
 
 .mychars-points-target img {
