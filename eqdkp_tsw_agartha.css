@@ -1499,7 +1499,7 @@ ul.breamcrumb .current::before{
 }
 
 .article-container.list-type2 header, .article-container.list-type2 header h3, .article-container.list-type2 p {
-	display: inline !important;
+	display: block !important;
 }
 
 .article-container-wrapper{
