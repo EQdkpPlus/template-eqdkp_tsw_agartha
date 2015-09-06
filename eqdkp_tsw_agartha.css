@@ -657,9 +657,10 @@ input[type=radio], input[type=checkbox]{
 	background-color: lighten(@eqdkpBodyBackgroundColor,10);
 	border: 1px solid @eqdkpInputBorderColor;
 	border-radius: 4px 0px 4px 4px;
-	margin-top: -4px;
+	margin-top: 0px;
 	padding: 4px 8px 0px 8px !important;
 	display: none;
+	z-index: 20;
 }
 
 .input-multilang.textarea .multilang-dropdown {
