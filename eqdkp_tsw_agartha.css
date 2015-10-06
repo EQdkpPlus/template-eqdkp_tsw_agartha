@@ -2296,7 +2296,9 @@ span.group_selector {
 	background-color:#F7992B;
 	overflow: hidden;
 }
-
+.eventdata-details div{
+	margin: 8px 0px;
+}
 /* general: game specific */
 .resists {
 	width: 27px;
