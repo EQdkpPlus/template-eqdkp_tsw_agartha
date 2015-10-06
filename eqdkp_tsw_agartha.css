@@ -3676,6 +3676,9 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	.responsive .first.column, .responsive .third.column {
 		min-width: 1% !important;
 		max-width: 100% !important;
+	}	
+	.responsive .bigDateTd {
+		display: none;
 	}
 }
 
