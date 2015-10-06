@@ -38,6 +38,7 @@
 			//<![CDATA[
 			{JS_CODE}
 			
+			<!-- IF not S_LOGGED_IN -->
 			$(document).ready(function() {
 				/* Login Dialog */
 				$( "#dialog-login" ).dialog({
@@ -47,6 +48,7 @@
 					autoOpen: false,
 				});
 			});
+			<!-- ENDIF -->
 			
 			<!-- IF S_NORMAL_HEADER -->
 			var user_timestamp_atom = "{USER_TIMESTAMP_ATOM}";
@@ -267,7 +269,7 @@
 		</script>
 	</head>
 	<body id="top" class="<!-- IF S_REPONSIVE -->responsive <!-- ENDIF --><!-- IF not S_NORMAL_HEADER -->simple-header<!-- ENDIF --> {BROWSER_CLASS}<!-- IF T_PORTAL_WIDTH --> fixed_width<!-- ENDIF --><!-- IF S_IN_ADMIN --> admin<!-- ELSE --> frontend<!-- ENDIF -->">
-		<!-- LISTENER header_top -->
+		<!-- LISTENER body_top -->
 		
 		{STATIC_HTMLCODE}
 		<!-- IF S_NORMAL_HEADER -->
@@ -413,7 +415,7 @@
 				<div id="logoContainer" class="{T_LOGO_POSITION}">
 					<div id="logoArea">
 						<!-- IF HEADER_LOGO -->
-						<img src="{HEADER_LOGO}" alt="{MAIN_TITLE}" id="mainlogo" />
+						<a href="{EQDKP_CONTROLLER_PATH}{SID}"><img src="{HEADER_LOGO}" alt="{MAIN_TITLE}" id="mainlogo" /></a>
 						<!-- ENDIF -->
 					</div><!-- close logoArea -->
 					
@@ -584,7 +586,7 @@
 		
 		<footer id="footer">
 				<!-- LISTENER footer_top -->
-				<div class="portal_block1">{PORTAL_BLOCK2}</div>
+				<div class="portal_block2">{PORTAL_BLOCK2}</div>
 				{EQDKP_PLUS_COPYRIGHT}
 				<!-- LISTENER footer_bottom --><br>
 			<div class="copyright">© 2007-2012, "The Secret World"™ is a registered trademark of Funcom Gmbh 2012. All rights reserved. All logos, characters, names and distinctive likenesses thereof are intellectual property of Funcom GmBH unless otherwise noted. All other trademarks are the property of their respected owners.</div><br>
@@ -598,6 +600,7 @@
 		<!-- LISTENER debug -->
 	<!-- ENDIF -->
 
+	<!-- IF not S_LOGGED_IN -->
 	<div id="dialog-login" title="{L_login}">
 		<form method="post" action="{EQDKP_CONTROLLER_PATH}Login{SEO_EXTENSION}{SID}" name="login" id="login" class="fv_checkit">
 			<!-- LISTENER login_popup -->
@@ -643,6 +646,8 @@
 			<!-- ENDIF -->
 		</form>
 	</div>
+	<!-- ENDIF -->
+	
 	<div class="reponsiveTestClass" style="display:none;"><!-- This div is for testing the responsiveness --></div>
 	<script type="text/javascript">
 		{JS_CODE_EOP}
