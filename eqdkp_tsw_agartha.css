@@ -440,14 +440,14 @@ h3 {
 
 .contentSidebarRight {
 	border-left: 1px solid @eqdkpSidebarBorderColor;
-	background-color: @eqdkpSidebarBackgroundColor;
+	background-color: fadeout(@eqdkpSidebarBackgroundColor,80);
 	color: @eqdkpSidebarFontColor;
 	padding: 10px;
 }
 
 .contentSidebarLeft {
 	border-right: 1px solid @eqdkpSidebarBorderColor;
-	background-color: @eqdkpSidebarBackgroundColor;
+	background-color: fadeout(@eqdkpSidebarBackgroundColor,80);
 	color: @eqdkpSidebarFontColor;
 	padding: 10px;
 }
@@ -1957,7 +1957,7 @@ font-size:inherit !important;
 .article-container.featured h2:before, .article_detail_container.featured h1.contentTitle:before {
 	content: "\f005";
 	font-family: FontAwesome;
-	color: gold;
+	color: @featuredColor;
 	font-size: 16px;
 }
 
@@ -4032,7 +4032,7 @@ button.thirdpartylogin.openid {
  **************************************************/
 /* Ribbons */
 @ribbon: @eqdkpContentHighlightColor;
-@featuredColor: gold;
+@featuredColor: red;
 
 .ribbon {
 	margin: 3px;

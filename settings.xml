@@ -49,7 +49,7 @@
 	
 	<sidebar_background_color>rgb(234, 234, 234)</sidebar_background_color>
 	<sidebar_font_color>rgb(0, 0, 0)</sidebar_font_color>
-	<sidebar_border_color>rgb(204, 204, 204)</sidebar_border_color>
+	<sidebar_border_color>rgb(247, 153, 43)</sidebar_border_color>
 	
 	<button_background_color>rgb(247, 153, 43)</button_background_color>
 	<button_font_color>rgb(255, 255, 255)</button_font_color>
