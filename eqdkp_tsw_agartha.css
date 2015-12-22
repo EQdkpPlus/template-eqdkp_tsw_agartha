@@ -4005,7 +4005,7 @@ button.thirdpartylogin.openid {
 
 .bigDateContainer {
 	text-align: center;
-	width: 100px;
+	width: 98%;
 	border-right: 1px solid @eqdkpContentBorderColor;
 	margin-right: 12px;
 	display: block;
@@ -4030,9 +4030,8 @@ button.thirdpartylogin.openid {
 /***************************************************
 /* Ribbons 
  **************************************************/
-/* Ribbons */
 @ribbon: @eqdkpContentHighlightColor;
-@featuredColor: red;
+@featuredColor: #6bd9f8;
 
 .ribbon {
 	margin: 3px;
@@ -4075,7 +4074,7 @@ button.thirdpartylogin.openid {
 	width: .5em;
 	height: 3em;
 	border-radius: 0.5em 0 0 .5em;
-	background-image: linear-gradient(to right, darken(@ribbon,1%) 0%, @ribbon 100%);
+	background-image: linear-gradient(to right, lighten(@ribbon,1%) 0%, @ribbon 100%);
 }
 .ribbon span:after {
   content: '';
@@ -4090,11 +4089,11 @@ button.thirdpartylogin.openid {
 	width: .5em;
 	height: 1em;
 	border-radius: .5em 0 0 .5em;
-	background-image: linear-gradient(to right, lighten(@ribbon,1%) 0%, darken(@ribbon,1%) 100%);
+	background-image: linear-gradient(to right, lighten(@ribbon,1%) 0%, lighten(@ribbon,1%) 100%);
 	box-shadow: 0 .062em 0 rgba(255,255,255,.6);
 }
 .featured .ribbon > span {
-	background: linear-gradient(-90deg, lighten(@featuredColor,20%) 0%, @featuredColor 100%);
+	background: linear-gradient(-90deg, darken(@featuredColor,20%) 0%, @featuredColor 100%);
 	color: black;
 }
 
@@ -4103,7 +4102,48 @@ button.thirdpartylogin.openid {
 	background-image: linear-gradient(to right, darken(@featuredColor,1%) 0%, @featuredColor 100%);
 }
 .featured .ribbon > span:after {
-	background-image: linear-gradient(to right, darken(@featuredColor,10%) 0%, darken(@featuredColor,30%) 100%);
+	background-image: linear-gradient(to right, lighten(@featuredColor,10%) 0%, lighten(@featuredColor,30%) 100%);
+}
+
+/***************************************************
+/* Article Boxes for Calendarentries
+ **************************************************/
+.articleCalendarEventBox {
+  display: inline-block;
+  max-width: 500px;
+  padding: 11px 14px;
+  white-space: nowrap;
+  background-color: @eqdkpContentContrastBackgroundColor;
+  border: 1px solid @eqdkpContentContrastBorderColor;
+  border-radius: 5px;
+  color: @eqdkpContentContrastColor;
+  margin: 5px;
+}
+
+.articleCalendarEventBox .bigDateContainer {
+	float: left;
+	border-right-color: transparent;
+}
+
+.articleCalendarEventBox .bigDateNumber {
+	font-size: 35px;
+	line-height: 35px;
+	margin-bottom: 5px;
+}
+.articleCalendarEventBox .green, .articleCalendarEventBox .orange, .articleCalendarEventBox .red, .articleCalendarEventBox .green:hover, .articleCalendarEventBox .orange:hover, .articleCalendarEventBox .red:hover {
+	background: none !important;
+	border: none !important;
+}
+.articleCalendarEventBox .green, .articleCalendarEventBox .green:hover {
+	color: green !important;;
+}
+
+.articleCalendarEventBox .orange, .articleCalendarEventBox .orange:hover {
+	color: orange !important;;
+}
+
+.articleCalendarEventBox .red, .articleCalendarEventBox .red:hover {
+	color: red !important;;
 }
 .elfinder .elfinder-navbar {
 	background-color: #131313 !important;
