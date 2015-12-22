@@ -4011,6 +4011,25 @@ button.thirdpartylogin.openid {
 	display: block;
 	position: relative;
 }
+.middleDateNumber {
+	font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: 100;
+	width: 100%;
+    display: block;
+}
+
+.middleDateTime {
+	font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: 100;
+	width: 100%;
+    display: block;
+}
 .list-type1 .td.bigDateTd, .list-type3 .td.bigDateTd {
 	width: 100px;
 }
