@@ -422,9 +422,7 @@
 	
 	<div class="reponsiveTestClass" style="display:none;"><!-- This div is for testing the responsiveness --></div>
 	<script type="text/javascript">
-		//<![CDATA[
-			{JS_CODE}
-				
+		//<![CDATA[			
 			<!-- IF not S_LOGGED_IN -->
 			$(document).ready(function() {
 				/* Login Dialog */
@@ -482,6 +480,10 @@
 					}, title: {L_change_style|jsencode}, width: 600, height: 500}
 				);
 			}
+			
+			/* User clock */
+			var user_clock_format = "dddd, "+mmocms_user_dateformat_long+" "+ mmocms_user_timeformat;
+			var mymoment = moment(mmocms_user_timestamp_atom).utcOffset(mmocms_user_timezone);
 			
 			$(document).ready(function() {
 				$('.notification-mark-all-read').on('click', function() {

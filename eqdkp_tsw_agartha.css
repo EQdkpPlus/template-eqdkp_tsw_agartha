@@ -4005,7 +4005,7 @@ button.thirdpartylogin.openid {
 
 .bigDateContainer {
 	text-align: center;
-	width: 98%;
+	width: 100px;
 	border-right: 1px solid @eqdkpContentBorderColor;
 	margin-right: 12px;
 	display: block;
@@ -4140,8 +4140,7 @@ button.thirdpartylogin.openid {
 }
 
 .articleCalendarEventBox .bigDateContainer {
-	float: left;
-	border-right-color: transparent;
+	border-right-color: @eqdkpContentContrastBorderColor;
 }
 
 .articleCalendarEventBox .bigDateNumber {
@@ -4164,6 +4163,10 @@ button.thirdpartylogin.openid {
 .articleCalendarEventBox .red, .articleCalendarEventBox .red:hover {
 	color: red !important;;
 }
+.qtip-content.ui-widget-content {
+	border-radius: 3px;
+}
+
 .elfinder .elfinder-navbar {
 	background-color: #131313 !important;
 }
@@ -4282,6 +4285,16 @@ text-decoration:line-through;
 .whoisonline_portal .table { box-shadow: none; }
 .whoisonline_portal .portalbox_content .td, .whoisonline_portal .portalbox_content { padding: 3px 4px; }
 
+/***************************************************
+ *Plugin Feedposter
+ **************************************************/
+.feedposter.feedtype_rss blockquote{
+	background-color: @eqdkpSidebarBackgroundColor !important;
+}
+.feedposter.feedtype_rss blockquote{
+	border-color: @eqdkpSidebarBorderColor !important;
+}
+.feedposter.feedtype_rss blockquote::before{color: @eqdkpSidebarBorderColor !important;}
 /***************************************************
  *Portalxx
  **************************************************/
