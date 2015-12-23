@@ -32,7 +32,9 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video,
+table.table, .table caption, .table tbody, .table tfoot, .table thead, .table tr, .table th, .table td,
+ {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -438,14 +440,14 @@ h3 {
 
 .contentSidebarRight {
 	border-left: 1px solid @eqdkpSidebarBorderColor;
-	background-color: @eqdkpSidebarBackgroundColor;
+	background-color: fadeout(@eqdkpSidebarBackgroundColor,80);
 	color: @eqdkpSidebarFontColor;
 	padding: 10px;
 }
 
 .contentSidebarLeft {
 	border-right: 1px solid @eqdkpSidebarBorderColor;
-	background-color: @eqdkpSidebarBackgroundColor;
+	background-color: fadeout(@eqdkpSidebarBackgroundColor,80);
 	color: @eqdkpSidebarFontColor;
 	padding: 10px;
 }
@@ -504,6 +506,13 @@ h3 {
 	padding: 0.8em 2px 5px 0.8em;
 	font-size: 1.2em;
 	color: #D9D7D7;
+}
+.portalbox_head .portal_fe_edit {
+	display: none;
+}
+
+.portalbox:hover .portal_fe_edit {
+	display: inline;
 }
 
 .portalbox_content {
@@ -1370,6 +1379,10 @@ div.pagination {
 	color: #000;
 }
 
+.noheader .categoryChildSitemap {
+	float: none;
+}
+
 hr#system-readmore {
 	display:none;
 }
@@ -1941,10 +1954,10 @@ font-size:inherit !important;
 	display: none;
 }
 
-.article-container.featured h2:before, .article_detail_container.featured h1.contentTitle:before {
+.article-container.featured header > h2:before, .article_detail_container.featured h1.contentTitle:before {
 	content: "\f005";
 	font-family: FontAwesome;
-	color: gold;
+	color: @featuredColor;
 	font-size: 16px;
 }
 
@@ -2068,6 +2081,12 @@ fieldset.settings.floatRight.raid input[type="text"]{
 	padding-bottom: 5px;
 	border-bottom: 1px solid #CCCCCC;
 	margin-top: 5px;
+}
+.calendar_blackicon{
+	color: black;
+}
+.calendar_redicon{
+	color: red;
 }
 
 .raidcal_name .toggle_button {
@@ -2251,7 +2270,9 @@ span.group_selector {
 	top: -8px;
 	left: -14px;
 }
-
+.tooltiprow{
+	min-height: 24px;
+}
 #memberScroller{
 	height: 300px;
 	overflow:auto;
@@ -2287,7 +2308,9 @@ span.group_selector {
 	background-color:#F7992B;
 	overflow: hidden;
 }
-
+.eventdata-details div{
+	margin: 8px 0px;
+}
 /* general: game specific */
 .resists {
 	width: 27px;
@@ -3660,6 +3683,9 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	.responsive .first.column, .responsive .third.column {
 		min-width: 1% !important;
 		max-width: 100% !important;
+	}	
+	.responsive .bigDateTd {
+		display: none;
 	}
 }
 
@@ -3719,6 +3745,10 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 
 	.responsive #personalAreaUser ul li {
 		margin-right: 10px;
+	}
+		
+	.list-type1 .ribbons, .list-type2 .ribbons, .list-type3 .ribbons  {
+		display: none;
 	}
 }
 
@@ -3879,6 +3909,20 @@ li.prio_2 {
 	border: 1px solid #B94A48 !important;
 }
 
+.bubble {
+  background-color: @eqdkpContentHighlightColor;
+  border-radius: 9px;
+  color: @eqdkpContentBackgroundColor;
+  display: inline-block;
+  font-size: .70rem;
+  padding: 1px 6px 1px;
+  position: relative;
+  text-shadow: none !important;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
 .notification_list li{
 	padding-bottom: 6px;
 	padding-top: 6px;
@@ -3947,6 +3991,180 @@ button.thirdpartylogin.openid {
 	
 .leaderboard > div > div{
 		padding: 6px;
+}
+
+/* Big Dates for Article List */
+.bigDateNumber {
+	font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 10px;
+    font-weight: 100;
+	width: 100%;
+    display: block;
+}
+
+.bigDateContainer {
+	text-align: center;
+	width: 100px;
+	border-right: 1px solid @eqdkpContentBorderColor;
+	margin-right: 12px;
+	display: block;
+	position: relative;
+}
+.middleDateNumber {
+	font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: 100;
+	width: 100%;
+    display: block;
+}
+
+.middleDateTime {
+	font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: 100;
+	width: 100%;
+    display: block;
+}
+.list-type1 .td.bigDateTd, .list-type3 .td.bigDateTd {
+	width: 100px;
+}
+
+.list-type1 .td, .list-type2 .td, .list-type3 .td {
+	vertical-align: top;
+}
+
+.list-type2 h2 {
+	border-bottom: none;
+}
+
+.list-type2 .fa-calendar-o, .list-type2 .fa-comments, .list-type2 .fa-folder-o {
+	margin-left: 10px;
+}
+
+/***************************************************
+/* Ribbons 
+ **************************************************/
+@ribbon: @eqdkpContentHighlightColor;
+@featuredColor: #6bd9f8;
+
+.ribbon {
+	margin: 3px;
+    margin-left: -18px;
+	width:98%;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+.ribbon span {
+  	position: relative;
+	display: block;
+	text-align: center;
+	bottom: 0em;
+	left: 0;
+	margin-right: 0.2em;
+	padding: .75em 1.25em .75em .75em;
+	margin-left:-0.5em;
+	background-color: @ribbon;
+	background-image: linear-gradient(-90deg, lighten(@ribbon,20%) 0%, @ribbon 100%);
+	box-shadow: inset 0 .062em 0 rgba(255,255,255,.6), 0 .125em .25em rgba(0,0,0,.2);
+	color: @eqdkpContentBackgroundColor;
+	text-shadow: 0 -.062em 0 rgba(0,0,0,.2);
+	width: 90%;
+	text-align: center;
+	display: block;
+	border-radius: 0 0 0 .5em;
+	word-wrap: break-word;
+}
+
+.ribbon span:before {
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+
+.ribbon span:before {
+	top: -1em;
+	left: 0em;
+	width: .5em;
+	height: 3em;
+	border-radius: 0.5em 0 0 .5em;
+	background-image: linear-gradient(to right, lighten(@ribbon,1%) 0%, @ribbon 100%);
+}
+.ribbon span:after {
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+
+.ribbon span:after {
+	top: -1em;
+	left: 0em;
+	width: .5em;
+	height: 1em;
+	border-radius: .5em 0 0 .5em;
+	background-image: linear-gradient(to right, lighten(@ribbon,1%) 0%, lighten(@ribbon,1%) 100%);
+	box-shadow: 0 .062em 0 rgba(255,255,255,.6);
+}
+.featured .ribbon > span {
+	background: linear-gradient(-90deg, darken(@featuredColor,20%) 0%, @featuredColor 100%);
+	color: black;
+}
+
+.featured .ribbon > span:before {
+	border-bottom-color: @featuredColor;
+	background-image: linear-gradient(to right, darken(@featuredColor,1%) 0%, @featuredColor 100%);
+}
+.featured .ribbon > span:after {
+	background-image: linear-gradient(to right, lighten(@featuredColor,10%) 0%, lighten(@featuredColor,30%) 100%);
+}
+
+/***************************************************
+/* Article Boxes for Calendarentries
+ **************************************************/
+.articleCalendarEventBox {
+  display: inline-block;
+  max-width: 500px;
+  padding: 11px 14px;
+  white-space: nowrap;
+  background-color: @eqdkpContentContrastBackgroundColor;
+  border: 1px solid @eqdkpContentContrastBorderColor;
+  border-radius: 5px;
+  color: @eqdkpContentContrastColor;
+  margin: 5px;
+}
+
+.articleCalendarEventBox .bigDateContainer {
+	border-right-color: @eqdkpContentContrastBorderColor;
+}
+
+.articleCalendarEventBox .bigDateNumber {
+	font-size: 35px;
+	line-height: 35px;
+	margin-bottom: 5px;
+}
+.articleCalendarEventBox .green, .articleCalendarEventBox .orange, .articleCalendarEventBox .red, .articleCalendarEventBox .green:hover, .articleCalendarEventBox .orange:hover, .articleCalendarEventBox .red:hover {
+	background: none !important;
+	border: none !important;
+}
+.articleCalendarEventBox .green, .articleCalendarEventBox .green:hover {
+	color: green !important;;
+}
+
+.articleCalendarEventBox .orange, .articleCalendarEventBox .orange:hover {
+	color: orange !important;;
+}
+
+.articleCalendarEventBox .red, .articleCalendarEventBox .red:hover {
+	color: red !important;;
+}
+.qtip-content.ui-widget-content {
+	border-radius: 3px;
 }
 
 .elfinder .elfinder-navbar {
@@ -4067,6 +4285,16 @@ text-decoration:line-through;
 .whoisonline_portal .table { box-shadow: none; }
 .whoisonline_portal .portalbox_content .td, .whoisonline_portal .portalbox_content { padding: 3px 4px; }
 
+/***************************************************
+ *Plugin Feedposter
+ **************************************************/
+.feedposter.feedtype_rss blockquote{
+	background-color: @eqdkpSidebarBackgroundColor !important;
+}
+.feedposter.feedtype_rss blockquote{
+	border-color: @eqdkpSidebarBorderColor !important;
+}
+.feedposter.feedtype_rss blockquote::before{color: @eqdkpSidebarBorderColor !important;}
 /***************************************************
  *Portalxx
  **************************************************/
