@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<install type="template" version="0.1.0">
+<install type="template" version="0.1.1">
 	<name>EQdkp TSW Agartha</name>
 	<author>Inkraja</author>
 	<authorEmail></authorEmail>
@@ -7,7 +7,7 @@
 	<creationDate>2015-01-01</creationDate>
 	<copyright>Inkraja</copyright>
 	<license>APGL V3</license>
-	<version>0.1.0</version>
+	<version>0.1.1</version>
 	<description></description>
 	<folder>eqdkp_tsw_agartha</folder>
 </install>
