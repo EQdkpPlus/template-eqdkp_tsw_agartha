@@ -34,8 +34,8 @@
 	<userarea_link_color_hover>rgb(255, 255, 255)</userarea_link_color_hover>
 	
 	<table_th_background_color>rgba(0, 0, 0, 0.65)</table_th_background_color>
-	<table_th_font_color></table_th_font_color>
-	<table_tr_font_color></table_tr_font_color>
+	<table_th_font_color>rgb(159, 159, 159)</table_th_font_color>
+	<table_tr_font_color>rgb(159, 159, 159)</table_tr_font_color>
 	<table_tr_background_color1>rgba(125, 125, 125,0)</table_tr_background_color1>
 	<table_tr_background_color2>rgba(125, 125, 125,0.55)</table_tr_background_color2>
 	<table_tr_background_color_hover>rgba(0, 0, 0,0.4)</table_tr_background_color_hover>
