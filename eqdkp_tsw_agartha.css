@@ -364,6 +364,9 @@ h3 {
 #logoArea {
 	float:left;
 	text-align:right;
+		& img{
+	max-height:200px;
+	}
 }
 
 #titles {
@@ -372,6 +375,7 @@ h3 {
 	padding-left:40px;
 	color: darken(@eqdkpBodyFontColor, 75);
 	font-family: 'Trebuchet MS',Arial,sans-serif;
+	min-width:400px;
 }
 
 #titles h1 {
@@ -2003,6 +2007,129 @@ ul.portal_block {
 .permissions {
 	width: 50%;
 	float: left;
+}
+
+/* ACP: styles management */
+.style {
+	width: 300px;
+	height: 200px;
+	margin: 5px;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	background: @eqdkpTableTrBackgroundColor2;
+	border: 1px solid @eqdkpTableBorderColor;
+}
+.style-preview {
+	width: 300px;
+	height: 200px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	filter: brightness(.5);
+	transition: .5s ease-in-out;
+	z-index: 0;
+	background-size: cover;
+  	background-position: center;
+}
+.style:hover .style-preview {
+	filter: brightness(1);
+}
+
+.style input[type="radio"] {
+	opacity: 0;
+}
+.style input[type="radio"] + label {
+	display: block;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	border: 1px solid @eqdkpButtonBorderColor;
+	border-radius: 3px;
+	background: @eqdkpTableTrFontColor;
+	cursor: pointer;
+	z-index: 1;
+}
+.style input[type="radio"] + label:hover:before {
+	content: '';
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	border-radius: 1px;
+	background: @eqdkpButtonBackgroundColorHover;
+}
+.style input[type="radio"]:checked + label:before {
+	content: '';
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	border-radius: 1px;
+	background: @eqdkpButtonBackgroundColor;
+}
+
+.style-action {
+	opacity: 1;
+	width: 100%;
+	padding: 3px 7px;
+	position: relative;
+	top: 0;
+	left: 0;
+	background-color: darken(fadein(@eqdkpTableTrBackgroundColor1, 80%),50);
+	z-index: 1;
+	display: inline-block;
+	text-align: right;
+	padding: 3px 0px 3px 0px;
+	min-height: 17px;
+}
+
+.styles-container .style-action a {
+	color: @eqdkpTableTrFontColor !important;
+}
+
+.style-info {
+	width: 300px;
+	position: absolute;	bottom: -43px;
+	background-color: darken(fadein(@eqdkpTableTrBackgroundColor1, 80%),50);
+	transition: bottom .3s ease-in;
+	z-index: 1;
+	padding-top: 2px;
+}
+.style-info:hover {
+	bottom: 0;
+}
+.style-info h2 {
+	margin: 0 15px;
+}
+.style-info table {
+	margin: 5px 10px;
+}
+.style-info td {
+	padding-right: 15px;
+}
+
+.style-checkbox {
+	float: left;
+}
+
+.style_red, .style_red_local {
+	border-color: #E80000; /* color from .icon-color-red, defined at eqdkpplus.css */
+}
+
+.style_yellow {
+	border-color: #e9ec00; /* color from .icon-color-yellow, defined at eqdkpplus.css */
+}
+.style-version {
+	float: right;
+	font-size: @eqdkpBodyFontSize;
+	padding-top: 3px;
 }
 
 /***************************************************
