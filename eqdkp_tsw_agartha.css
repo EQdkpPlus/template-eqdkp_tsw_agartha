@@ -3437,11 +3437,19 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 .reponsiveTestClass {text-align:right;}
 	
 @media all and (max-width: 899px) {
+	
 	body.responsive, html , .responsive #personalArea{
 		font-size: 13px;
 		line-height: 14px;
 	}
-	
+		body {
+	background-image: none !important; /*url(@{TEMPLATE_IMAGE_PATH}bodyBGmobil.png)*/
+	background-size: auto;
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: left top;
+	z-index: 0;	
+	}
 	.reponsiveTestClass {text-align:center;}
 	
 	.responsive #personalArea {
