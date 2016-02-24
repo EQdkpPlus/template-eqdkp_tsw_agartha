@@ -2340,12 +2340,12 @@ fieldset.raidcal_infos dt, fieldset.moderation_panel dt {
 
 table.guesttable { 
 	padding: 5px;
-	border: 1px solid #ccc;
-	background: #E8E8E8;
+	border: 1px solid @eqdkpTableBorderColor;
+	background: @eqdkpTableThBackgroundColor;
 }
 table.guesttable td{
-	color:black;
-	background: rgba(255, 255, 255, 0.3);
+	color:@eqdkpTableTrFontColor;
+	background: @eqdkpTableTrBackgroundColor1;
 }
 
 .style1 {
