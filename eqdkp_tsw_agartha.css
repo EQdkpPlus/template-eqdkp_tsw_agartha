@@ -1335,12 +1335,12 @@ div.pagination {
 
 /* Article Sitemap */
 .articleSitemap, .categoryChildSitemap {
-	border-color: #DDDDDD;
+	border-color: @eqdkpContentBorderColor;
 	border-image: none;
 	border-style: solid;
 	border-width: 1px 1px 1px 1px;
 	text-decoration: none;
-	background-color: #fff;
+	background-color: @eqdkpContentBackgroundColor;
 	line-height: 20px;
 	margin-left: 10px;
 	margin-bottom: 10px;
@@ -1351,7 +1351,7 @@ div.pagination {
 
 .articleSitemap li, .categoryChildSitemap li {
 	padding: 6px 12px;
-	border-bottom: 1px solid #DDDDDD;
+	border-bottom: 1px solid @eqdkpContentBorderColor;
 }
 
 .articleSitemap li:last-child, .categoryChildSitemap li:last-child {
@@ -1366,21 +1366,21 @@ div.pagination {
 }
 
 .articleSitemap li.active {
-	background-color: #F7F7F9;
+	background-color: @eqdkpContentContrastBackgroundColor;
 	cursor: default;
 }
 
 .articleSitemap li.active a {
-	color: #999999;
+	color: @eqdkpContentHighlightColor;
 }
 
 .articleSitemap li:hover, .categoryChildSitemap li:hover {
-	background-color: #F7F7F9;
+	background-color: @eqdkpContentContrastBackgroundColor;
 	cursor: default;
 }
 
 .articleSitemap li:hover a, .categoryChildSitemap li:hover a {
-	color: #000;
+		color: @eqdkpContentHighlightColor;
 }
 
 .noheader .categoryChildSitemap {
