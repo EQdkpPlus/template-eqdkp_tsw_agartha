@@ -76,4 +76,7 @@
 	<misc_color1>rgb(0, 0, 0)</misc_color1>
 	<misc_color2></misc_color2>
 	<misc_color3></misc_color3>
+	<additional_less>
+		@styleCalendarStateColor : true;
+		@styleCalenderGameStyle : true;
 </settings>

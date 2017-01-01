@@ -28,13 +28,9 @@
 				background:#000000 url('{TEMPLATE_BACKGROUND}') no-repeat center top;
 				background-attachment: {T_BACKGROUND_POSITION};
 			}
-			
-			#wrapper header {
-				background: none !important;
-			}
 			<!-- ENDIF -->
 		</style>
-		
+
 		<script type="text/javascript">
 			//<![CDATA[
 			{JS_CODE}
@@ -43,7 +39,7 @@
 	</head>
 	<body id="top" data-template="{TEMPLATE_CLASS}" class="<!-- IF S_REPONSIVE -->responsive <!-- ENDIF --><!-- IF not S_NORMAL_HEADER -->simple-header<!-- ENDIF --> {BROWSER_CLASS}<!-- IF T_PORTAL_WIDTH --> fixed_width<!-- ENDIF --><!-- IF S_IN_ADMIN --> admin<!-- ELSE --> frontend<!-- ENDIF -->">
 		<!-- LISTENER body_top -->
-		
+
 		{STATIC_HTMLCODE}
 		<!-- IF S_NORMAL_HEADER -->
 		<header>
@@ -54,7 +50,7 @@
 					<ul>
 						<li><a href="{EQDKP_CONTROLLER_PATH}Login{SEO_EXTENSION}{SID}" class="openLoginModal" onclick="return false;"><i class="fa fa-sign-in fa-lg"></i> {L_login}</a></li>
 						<!-- IF U_REGISTER != "" --><li>{U_REGISTER}</li><!-- ENDIF -->
-						
+
 						<li>
 							<div class="langswitch-tooltip-container">
 								<a href="#" class="langswitch-tooltip-trigger tooltip-trigger" data-tooltip="langswitch-tooltip">{USER_LANGUAGE_NAME}</a>
@@ -65,12 +61,12 @@
 								</ul>
 							</div>
 						</li>
-						
+
 						<!-- BEGIN personal_area_addition -->
 						<li>{personal_area_addition.TEXT}</li>
 						<!-- END personal_area_addition -->
 					</ul>
-					
+
 					<!-- ELSE -->
 					<ul>
 						<li>
@@ -115,9 +111,9 @@
 								</ul>
 							</div>
 							<!-- ENDIF -->
-							
+
 							<!-- IF U_CHARACTERS != "" --><li><a href="{U_CHARACTERS}"><i class="fa fa-group fa-lg"></i> <span class="hiddenSmartphone">{L_menu_members}</span></a></li><!-- ENDIF -->
-							
+
 							<!-- IF S_MYCHARS_POINTS and U_CHARACTERS != "" -->
 								<li class="hiddenSmartphone">
 									<div class="mychars-points-tooltip-container">
@@ -137,7 +133,7 @@
 								</div>
 								</li>
 							<!-- ENDIF -->
-							
+
 							<li>
 								<div class="notification-tooltip-container">
 									<a class="notification-tooltip-trigger"><i class="fa fa-bell fa-lg"></i> <span class="hiddenSmartphone">{L_notifications}</span></a>
@@ -151,11 +147,11 @@
 												<span class="bubble-yellow notification-bubble-yellow notification-filter hand" <!-- IF NOTIFICATION_COUNT_YELLOW == 0 -->style="display:none;"<!-- ENDIF -->>{NOTIFICATION_COUNT_YELLOW}</span>
 												<span class="bubble-green notification-bubble-green notification-filter hand" <!-- IF NOTIFICATION_COUNT_GREEN == 0 -->style="display:none;"<!-- ENDIF -->>{NOTIFICATION_COUNT_GREEN}</span>
 											</div>
-												
+
 											<div class="floatRight">
 												<span class="hand notification-mark-all-read">{L_mark_all_as_read}</span> &bull; <span class="hand" onclick="window.location='{EQDKP_CONTROLLER_PATH}Settings{SEO_EXTENSION}{SID}#fragment-notifications'"><i class="fa fa-cog fa-lg"></i></span>
 											</div>
-											
+
 											<div class="clear"></div>
 										</li>
 										<li class="tooltip-divider"></li>
@@ -167,8 +163,8 @@
 									</ul>
 								</div>
 							</li>
-							
-							
+
+
 							<!-- IF S_SEARCH -->
 							<li class="hiddenDesktop"><a href="{EQDKP_CONTROLLER_PATH}Search{SEO_EXTENSION}{SID}"><i class="fa fa-search"></i></a></li>
 							<!-- ENDIF -->
@@ -196,7 +192,7 @@
 			</div> <!-- close personalArea -->
 		</header>
 		<div id="wrapper">
-			
+
 		<header>
 			<div id="header">
 				<!-- LISTENER header_top -->
@@ -206,7 +202,7 @@
 						<a href="{EQDKP_CONTROLLER_PATH}{SID}"><img src="{HEADER_LOGO}" alt="{MAIN_TITLE}" id="mainlogo" /></a>
 						<!-- ENDIF -->
 					</div><!-- close logoArea -->
-					
+
 					<hgroup id="titles">
 							<h1>{MAIN_TITLE}</h1><br />
 							<h2>{SUB_TITLE}</h2>
@@ -218,8 +214,8 @@
 				<!-- LISTENER header_bottom -->
 			</div> <!-- close header-->
 		</header>
-		
-		
+
+
 		<section id="contentContainer">
 			<a id="content"></a>
 			<!-- LISTENER content_container_top -->
@@ -231,23 +227,28 @@
 							<div class="clear noheight">&nbsp;</div>
 						</div>
 						<div class="hiddenDesktop nav-mobile">
-							<i class="fa fa-list hand" onclick="$('.nav-mobile-overlay').toggle();"></i>
-							<div class="nav-mobile-overlay">
-								<div class="nav-mobile-closebtn" onclick="$('.nav-mobile-overlay').toggle();">
-									<i class="fa fa-lg fa-times hand"></i>
+							<i class="fa fa-list hand" onclick="$('.nav-mobile .mobile-overlay').toggle();"></i>
+							<div class="mobile-overlay">
+								<div class="overlay-header">
+									<a class="title" href="{EQDKP_CONTROLLER_PATH}{SID}">
+										<!-- IF HEADER_LOGO --><img src="{HEADER_LOGO}" alt="{MAIN_TITLE}" /><!-- ELSE -->{MAIN_TITLE}<!-- ENDIF -->
+									</a>
+									<div class="close" onclick="$('.nav-mobile .mobile-overlay').toggle();"><i class="fa fa-times"></i></div>
 								</div>
-							{MAIN_MENU_MOBILE}
-							<!-- IF S_IN_ADMIN -->
-							<div class="admin-headline"><i class="fa fa-cog fa-lg"></i> {L_menu_admin_panel}</div>
-							{ADMIN_MENU_MOBILE}
-							<!-- ELSE -->
-								<!-- IF S_ADMIN --><div class="admin-headline"><a href="{EQDKP_ROOT_PATH}admin/{SID}"><i class="fa fa-cog fa-lg"></i> {L_menu_admin_panel}</a></div><!-- ENDIF -->
-							<!-- ENDIF -->
+								<div class="overlay-content">
+									<nav class="mainmenu-mobile-wrapper"><div class="heading">{L_menu_eqdkp}</div>{MAIN_MENU_MOBILE}</nav>
+									<!-- IF S_IN_ADMIN -->
+									<nav class="adminmenu-mobile-wrapper"><div class="heading">{L_menu_admin_panel}</div>{ADMIN_MENU_MOBILE}</nav>
+									<!-- ENDIF -->
+								</div>
+								<div class="overlay-footer">
+									<!-- IF S_ADMIN and not S_IN_ADMIN --><a href="{EQDKP_ROOT_PATH}admin/{SID}"><i class="fa fa-cog fa-lg"></i> {L_menu_admin_panel}</a><!-- ENDIF -->
+								</div>
 							</div>
 						</div>
 						<!-- LISTENER mainmenu -->
 					</div><!-- close mainmenu -->
-					
+
 					<!-- IF S_IN_ADMIN -->
 					<div id="adminmenu">
 						<div class="hiddenSmartphone">
@@ -258,7 +259,7 @@
 					<!-- ENDIF -->
 				</nav>
 			</header>
-			
+
 			<div class="portal">
 				<!-- LISTENER portal_top -->
 				<div class="columnContainer">
@@ -271,11 +272,11 @@
 						</div> <!-- close first column -->
 					</aside>
 					<!-- ENDIF -->
-					
+
 					<article class="second column <!-- IF not S_PORTAL_RIGHT -->no_third_column<!-- ENDIF -->">
 						<div class="columnInner">
 							<!-- LISTENER content_middle_top -->
-						
+
 							<!-- IF S_SHOW_COOKIE_HINT -->
 							<div class="infobox infobox-large infobox-blue clearfix">
 								<i class="fa-info-circle fa pull-left fa-2x"></i> {COOKIE_HINT}
@@ -307,7 +308,7 @@
 								</div>
 							</div><!-- close contentBody -->
 							<!-- LISTENER content_middle_bottom -->
-							
+
 							<!-- IF S_NORMAL_FOOTER -->
 							<aside id="portal-footer">
 							<!-- LISTENER portal-bottom-top -->
@@ -327,7 +328,7 @@
 							</footer>
 						</div>
 					</article><!-- close second column -->
-					
+
 					<!-- IF S_PORTAL_RIGHT -->
 					<aside class="third column portal-right" style="<!-- IF T_COLUMN_RIGHT_WIDTH -->min-width:{T_COLUMN_RIGHT_WIDTH};max-width:{T_COLUMN_RIGHT_WIDTH}<!-- ELSE -->min-width: 200px;<!-- ENDIF -->">
 						<div class="columnInner">
@@ -339,7 +340,7 @@
 					<!-- ENDIF -->
 				</div>
 			</div>
-			
+
 			<footer id="contentFooter">
 				<!-- LISTENER content-footer-top -->
 				<div class="floatLeft">
@@ -348,16 +349,16 @@
 					<!-- ELSE -->
 					<div class="toggleResponsive"><a href="{SID}&toggleResponsive=mobile"><a href="{SID}&toggleResponsive=mobile"><i class="fa fa-lg fa-mobile-phone"></i> {L_mobile_version}</a></div>
 					<!-- ENDIF -->
-					
+
 					<!-- LISTENER content-footer-left -->
 				</div>
 				<div class="floatRight">
 					<!-- LISTENER content-footer-right -->
-				
+
 					<!-- IF not S_LOGGED_IN and S_STYLECHANGER -->
 					<a href="javascript:change_style();"><i class="fa fa-paint-brush"></i> {L_change_style}</a>
 					<!-- ENDIF -->
-					
+
 					<!-- IF S_GLOBAL_RSSFEEDS -->
 					<div class="rss-tooltip-container">
 						<a class="rss-tooltip-trigger tooltip-trigger" data-tooltip="rss-tooltip"><i class="fa hand fa-rss fa-lg"></i></a>
@@ -371,7 +372,7 @@
 				</div>
 			</footer>
 		</section>
-		
+
 		<footer id="footer">
 				<!-- LISTENER footer_top -->
 				<div class="portal_block2">{PORTAL_BLOCK2}</div>
@@ -382,7 +383,7 @@
 				<a target="new" href="http://www.ea.com"><img border="0" src="{TEMPLATE_PATH}/images/footer-logo-ea.png" alt="Electronic Arts" /></a></div>
 		</footer><!-- close footer -->
 	</div><!-- close wrapper -->
-	
+
 	<!-- ELSE -->
 		<!-- IF S_SHOW_QUERIES --><br />{DEBUG_TABS}<!-- ENDIF -->
 		<!-- LISTENER debug -->
@@ -403,9 +404,8 @@
 					<dd>
 						<div class="input-icon">
 							<i class="fa fa-user"></i><input type="text" name="username" size="30" maxlength="30" class="input username" id="username" placeholder="{L_username}" required />
-							<div class="fv_msg" data-errormessage="{L_fv_required_user}"></div>
 						</div>
-						
+
 					</dd>
 				</dl>
 				<dl>
@@ -414,7 +414,6 @@
 						<div class="input-icon">
 							<i class="fa fa-key"></i>
 							<input type="password" name="password" pattern=".{3,}" size="30" maxlength="32" class="input password" id="password" placeholder="{L_password}" required />
-							<div class="fv_msg" data-errormessage="{L_fv_required_password_pattern}"></div>
 						</div>
 						<!-- IF S_SHOW_PWRESET_LINK -->
 						<br />{U_PWRESET_LINK}<br />
@@ -435,12 +434,12 @@
 		</form>
 	</div>
 	<!-- ENDIF -->
-	
+
 	<div class="reponsiveTestClass" style="display:none;"><!-- This div is for testing the responsiveness --></div>
 	<script type="text/javascript">
 		//<![CDATA[
 			<!-- IF not S_LOGGED_IN -->
-			$(document).ready(function() {
+			$(function() {
 				/* Login Dialog */
 				$( "#dialog-login" ).dialog({
 					height: <!-- IF S_BRIDGE_INFO -->450<!-- ELSE -->350<!-- ENDIF -->,
@@ -450,15 +449,15 @@
 				});
 			});
 			<!-- ENDIF -->
-			
+
 			<!-- IF S_NORMAL_HEADER -->
-			
+
 			function recalculate_notification_bubbles(){
 				var red = 0; var green = 0; var yellow = 0;
 				$('.notification-content ul li').each(function( index ) {
 					var myclass = $(this).attr('class');
 					var count = $(this).data('count');
-					
+
 					if (myclass == 'prio_0') green += parseInt(count);
 					if(myclass == 'prio_1') yellow += parseInt(count);
 					if(myclass == 'prio_2') red += parseInt(count);
@@ -478,14 +477,14 @@
 				} else {
 					$('.notification-bubble-red').html(red).hide();
 				}
-				
+
 				if (yellow ==0 && green==0 && red==0){
 					$('.notification-content ul').html({L_notification_none|jsencode});
 				}
-				
+
 				notification_favicon(red, yellow, green);
 			}
-			
+
 
 			function change_style(){
 				$('<div>').html('<div class="style-switch-container"><i class="fa fa-lg fa-spin fa-spinner"></i></div>').dialog(
@@ -496,19 +495,19 @@
 					}, title: {L_change_style|jsencode}, width: 600, height: 500}
 				);
 			}
-			
+
 			/* User clock */
 			var user_clock_format = "dddd, "+mmocms_user_dateformat_long+" "+ mmocms_user_timeformat;
 			var mymoment = moment(mmocms_user_timestamp_atom).utcOffset(mmocms_user_timezone);
-			
-			$(document).ready(function() {
+
+			$(function() {
 				$('.notification-mark-all-read').on('click', function() {
-				    $('.notification-content ul').html({L_notification_none|jsencode});
+					$('.notification-content ul').html({L_notification_none|jsencode});
 					$('.notification-bubble-red, .notification-bubble-yellow, .notification-bubble-green').hide();
 					notification_favicon(0, 0, 0);
 					$.get(mmocms_controller_path+"Notifications"+mmocms_seo_extension+mmocms_sid+"&markallread");
 				});
-	
+
 				//Update Favicon
 				favicon = new Favico({animation:'none'});
 				notification_favicon({NOTIFICATION_COUNT_RED}, {NOTIFICATION_COUNT_YELLOW}, {NOTIFICATION_COUNT_GREEN});
@@ -517,13 +516,13 @@
 				<!-- JS for simple header. Above is for normal header only -->
 			<!-- ENDIF -->
 
-		{JS_CODE_EOP}
-		
-		//Reset Favicon, for Bookmarks
-		$(window).on('unload', function() {
-            if (typeof favicon !== 'undefined'){ favicon.reset(); }
-   		 });
-   		 //]]>
+			{JS_CODE_EOP}
+
+			//Reset Favicon, for Bookmarks
+			$(window).on('unload', function() {
+				if (typeof favicon !== 'undefined'){ favicon.reset(); }
+			});
+		//]]>
 	</script>
 	{FOOTER_CODE}
 	<!-- LISTENER body_bottom -->
