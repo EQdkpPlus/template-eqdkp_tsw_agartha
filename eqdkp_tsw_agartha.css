@@ -3964,6 +3964,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	margin: 10px 0px;
 	display:inline;
 }
+#errorlog_tabs #el_mail iframe { background: #999; } 
 .greenbox{
 	background-color: #DFF0D8;
 	border-color: #D6E9C6;
