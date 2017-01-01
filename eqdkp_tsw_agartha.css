@@ -1625,7 +1625,7 @@ div.pagination {
 hr#system-readmore {
 	display:none;
 }
-
+ul.breadcrumb,
 ul.breamcrumb {
 	color: @eqdkpContentFontColor;
 	font-size: 13px;
@@ -1637,13 +1637,13 @@ ul.breamcrumb {
 	width: 100%;
 	float:left;
 }
-
+ul.breadcrumb li,
 ul.breamcrumb li {
 	float: left;
 	position: relative;
 	border-right: 0px solid @eqdkpContentAccentColor;
 }
-
+ul.breadcrumb a,
 ul.breamcrumb a {
 	padding: 1em 1em 1em 2em;
 	display: block;
@@ -1654,21 +1654,22 @@ ul.breamcrumb a {
 	background-color: @eqdkpContentAccentColor;
 	background-image: linear-gradient(to right, @eqdkpTableThBackgroundColor, @eqdkpContentAccentColor);
 }
-
+ul.breadcrumb li:first-child a,
 ul.breamcrumb li:first-child a{
 	margin-bottom: -4px;
 	margin-top: -3px;
 	padding-left: 1em;
 }
-
+ul.breadcrumb li:first-child a i,
 ul.breamcrumb li:first-child a i {
 	font-size: 1.5em;
 }
-
+ul.breadcrumb a:hover,
 ul.breamcrumb a:hover{
 	background: lighten(@eqdkpBodyBackgroundColor, 10);
 }
-
+ul.breadcrumb a::after,
+ul.breadcrumb a::before,
 ul.breamcrumb a::after,
 ul.breamcrumb a::before{
 	content: "";
@@ -1680,33 +1681,34 @@ ul.breamcrumb a::before{
 	border-left: 1.05em solid;
 	right: -1em;
 }
-
+ul.breadcrumb a::after,
 ul.breamcrumb a::after{
 	z-index: 2;
 	border-left-color: @eqdkpContentAccentColor;
 }
-
+ul.breadcrumb a::before,
 ul.breamcrumb a::before{
 	border-left-color: @eqdkpContentBorderColor;
 	right: -1.1em;
 	z-index: 1;
 }
-
+ul.breadcrumb a:hover::after,
 ul.breamcrumb a:hover::after{
 	border-left-color: lighten(@eqdkpBodyBackgroundColor, 10);
 }
-
+ul.breadcrumb .current,
+ul.breadcrumb .current:hover,
 ul.breamcrumb .current,
 ul.breamcrumb .current:hover{
 	font-weight: bold;
 	background: none;
 }
-
+ul.breadcrumb .current::after,
+ul.breadcrumb .current::before,
 ul.breamcrumb .current::after,
 ul.breamcrumb .current::before{
 	content: normal;
 }
-
 .breadcrumb-container {
 	margin-bottom: 8px;
 }
@@ -3649,29 +3651,29 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		float: none;
 	}
 	
-	.responsive .breamcrumb li, .responsive .breamcrumb li a:after, .responsive .breamcrumb li a:before {
+	.responsive .breamcrumb li, .responsive .breamcrumb li a:after, .responsive .breamcrumb li a:before,.responsive .breadcrumb li, .responsive .breadcrumb li a:after, .responsive .breadcrumb li a:before  {
 		display: none;
 	}
 	
-	.responsive .breamcrumb li:first-child, .responsive .breamcrumb li:nth-last-of-type(2) {
+	.responsive .breamcrumb li:first-child, .responsive .breamcrumb li:nth-last-of-type(2),.responsive .breadcrumb li:first-child, .responsive .breadcrumb li:nth-last-of-type(2)  {
 		display: inline;
 	}
 	
-	.responsive .breamcrumb li:first-child a {
+	.responsive .breamcrumb li:first-child a, .responsive .breadcrumb li:first-child a {
 		border-right: 1px solid #1D1D1D;
 		padding-right: 8px;
 		padding-left: 8px !important;
 	}
 	
-	.responsive .breamcrumb li {
+	.responsive .breamcrumb li, .responsive .breadcrumb li  {
 		font-size: 14px;
 	}
 	
-	.responsive .breamcrumb li:nth-last-of-type(2) a {
+	.responsive .breamcrumb li:nth-last-of-type(2) a, .responsive .breadcrumb li:nth-last-of-type(2) a  {
 		padding-left: 22px;
 	}
 	
-	.responsive .breamcrumb li:nth-last-of-type(2) a:before {
+	.responsive .breamcrumb li:nth-last-of-type(2) a:before, .responsive .breadcrumb li:nth-last-of-type(2) a:before {
 		content:"\f060";
 		display:inline;
 		border: none;
@@ -3684,7 +3686,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		font-family: "FontAwesome";
 	}
 	
-	.responsive .breamcrumb li:first-child a:before {
+	.responsive .breamcrumb li:first-child a:before, .responsive .breadcrumb li:first-child a:before {
 		display: none;
 	}
 	
