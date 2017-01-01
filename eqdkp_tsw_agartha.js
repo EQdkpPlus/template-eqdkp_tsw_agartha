@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
 	if(mmocms_header_type == 'full'){		
 		/* My Chars Points */
 		$('.mychars-points-tooltip .char').on('click', function(){
