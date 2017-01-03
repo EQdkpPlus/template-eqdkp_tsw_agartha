@@ -18,7 +18,7 @@
 	<body_link_color_hover>rgb(255, 255, 255)</body_link_color_hover>
 	<body_link_decoration>none</body_link_decoration>
 	
-	<container_background_color>rgb(224, 224, 224)</container_background_color>
+	<container_background_color>rgba(125,125,125,.05)</container_background_color>
 	<container_border_color>rgb(56, 56, 56)</container_border_color>
 	<content_background_color>rgba(125,125,125,.25)</content_background_color>
 	<content_font_color>rgb(159, 159, 159)</content_font_color>
